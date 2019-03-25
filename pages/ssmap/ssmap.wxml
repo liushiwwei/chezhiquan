@@ -1,0 +1,10 @@
+<!--pages/ssmap/ssmap.wxml-->
+<map id='myMap' show-location>
+    <cover-image class="cover-image" catchtap="backTap" src="/static/img/location.png" />
+</map>
+<view class='gps'>
+<!-- <text>实时定位经度:{{lat}}纬度:{{long}}</text> -->
+
+<view>时速 : {{speed}}</view>
+</view>
+

@@ -1,0 +1,24 @@
+/* pages/ssmap/ssmap.wxss */
+#myMap{
+  width: 750rpx;
+    height: 600rpx;
+    }
+#myMap image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 530rpx;
+  margin-left: 30rpx;
+}
+
+.cover-image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  margin-top: 500rpx;
+}
+.gps{
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #1296db;
+  text-align:left;
+}

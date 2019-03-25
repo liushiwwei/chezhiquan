@@ -1,0 +1,15 @@
+<!-- pages/serve/serve.wxml -->
+<view class="weui-flex nav">
+    <view class="weui-flex__item">
+        <view class="placeholder">weui</view>
+    </view>
+    <view class="weui-flex__item">
+        <view class="placeholder">weui</view>
+    </view>
+    <view class="weui-flex__item">
+        <view class="placeholder">weui</view>
+    </view>
+    <view class="weui-flex__item">
+        <view class="placeholder">weui</view>
+    </view>
+</view>

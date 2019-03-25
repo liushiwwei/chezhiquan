@@ -1,0 +1,9 @@
+/* components/notice/notice.wxss */
+.left{
+  width: 192rpx;
+  height: 192rpx;
+}
+.left image{
+  width: 100%;
+  height: 100%;
+}
