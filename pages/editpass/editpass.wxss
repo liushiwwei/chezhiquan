@@ -1,0 +1,76 @@
+/* pages/editpass/editpass.wxss */
+
+page {
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.top {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15rpx;
+  box-shadow: 0 5rp 5rp #e9e9e9;
+}
+
+.one_list {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  width: 450rpx;
+}
+
+.x {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  float: right;
+}
+
+.x_line {
+  width: 472rpx;
+  height: 2rpx;
+  margin-left: 118rpx;
+  background-color: #eee;
+}
+.xx_line {
+  width: 442rpx;
+  height: 2rpx;
+  margin-left: 148rpx;
+  background-color: #eee;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 350rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 40rpx;
+  background-color: #4bc4f7;
+  border-radius: 12rpx;
+}
+.btn::after{
+  border: 0;
+}

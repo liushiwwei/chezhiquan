@@ -62,12 +62,12 @@
   <!-- 开关防护功能 -->
   <view class='guard'>
     <view class='block'>
-      <block wx:for="{{notice}}" wx:key="{{item.id}}" >
+      <block wx:for="{{notice}}" wx:key="{{item.id}}"  wx:if="{{notice.length>0}}" >
         <view class='qidong' bindtap='qidong' >
-          <image wx:if="{{item}}" src='{{qidongon?item.img_url3:item.img_url1}}'></image>
+          <image src='{{qidongon?item.img_url3:item.img_url1}}'></image>
         </view>
         <view class='fanghu' bindtap='fanghu'>
-          <image wx:if="{{item}}" src='{{fanghuon?item.img_url2:item.img_url1}}'></image>
+          <image src='{{fanghuon?item.img_url2:item.img_url1}}'></image>
         </view>
       </block>
       <view class="bottl">

@@ -1,0 +1,131 @@
+/* pages/login/login.wxss */
+page{
+height:100%;
+
+  box-sizing: border-box;
+}
+.lolol{
+  color: #83C1F1;
+}
+
+.bigbg{
+  width:100%;
+  min-height:100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bigbg .ffrom{
+  width: 100%;
+  margin-left: 50%;
+  margin-left: 90rpx;
+}
+.bigbg .logo{
+  width:488rpx;
+  height:426rpx;
+
+}
+/* 注册部分 */
+.bigbg .loging{
+  width: 570rpx;
+  height: 190rpx;
+  position: absolute;
+  top: 250rpx;
+  /* background-color: red */
+}
+.bigbg .loging .user{
+  width: 560rpx;
+  height: 68rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+}
+.bigbg .loging .user image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.bigbg .loging .user .umobil{
+  flex: block;
+  float: right;
+  width: 440rpx;
+  text-align: left;
+  margin-right: 22rpx;
+  margin-top: 5rpx;
+  color: #cccccc;
+  font-size: 18px;
+}
+/* 密码部分 */
+.bigbg .loging .password{
+  width: 560rpx;
+  height: 68rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top: 40rpx;
+}
+.bigbg .loging .password image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.bigbg .loging .password .logpass{
+  flex: block;
+  float: right;
+  width: 440rpx;
+  text-align: left;
+  margin-right: 23rpx;
+  margin-top: 5rpx;
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 18rpx;
+}
+/* 验证码部分 */
+.bigbg .loging .userCode{
+  width: 560rpx;
+  height: 68rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top:40rpx;
+  position: relative;
+}
+.bigbg .loging .userCode image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.bigbg .loging .userCode .logcode{
+  flex: block;
+  float: right;
+  width: 440rpx;
+  text-align: left;
+  margin-right: 22rpx;
+  margin-top: 5rpx;
+  color: #cccccc;
+  font-size: 18px;
+}
+.bigbg .loging .userCode button{
+  line-height: 76rpx;
+  font-size: 30rpx;
+  width: 220rpx;
+  color: #83C1F1;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* 登录按钮部分 */
+.bigbg .ffrom .btn{
+  width: 570rpx;
+  height: 78rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: 250rpx;
+}

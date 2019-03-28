@@ -1,0 +1,103 @@
+/* pages/login/login.wxss */
+page{
+height:100%;
+}
+.lolol{
+  color: #83C1F1;
+}
+.bigbg{
+  width:100%;
+  min-height:100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bigbg .logo{
+  width:488rpx;
+  height:426rpx;
+
+}
+/* 登录部分样式 */
+.bigbg .loging{
+  width: 570rpx;
+  height: 190rpx;
+  position: absolute;
+  top: 480rpx;
+  /* background-color: red */
+}
+.bigbg .loging .user{
+  width: 560rpx;
+  height: 68rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+}
+.bigbg .loging .user image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.bigbg .loging .user .umobil{
+  flex: block;
+  float: right;
+  width: 440rpx;
+  text-align: left;
+  margin-right: 22rpx;
+  margin-top: 5rpx;
+  color: #cccccc;
+  font-size: 18px;
+}
+/* 密码部分 */
+.bigbg .loging .password{
+  width: 560rpx;
+  height: 68rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top: 40rpx;
+}
+.bigbg .loging .password image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.bigbg .loging .password .logpass{
+  flex: block;
+  float: right;
+  width: 440rpx;
+  text-align: left;
+  margin-right: 23rpx;
+  margin-top: 5rpx;
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 18rpx;
+}
+
+/* 登录按钮部分 */
+.bigbg .loginBtn{
+  width: 570rpx;
+  height: 78rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: 250rpx;
+}
+.bigbg .loginBtn .btnTex{
+  font-size:24rpx;
+  line-height: 24rpx;
+  color: #fff;
+  position: absolute;
+  top: -45rpx;
+  right: 0;
+}
+
+.bigbg .register{
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 100rpx;
+}

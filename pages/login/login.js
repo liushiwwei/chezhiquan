@@ -1,4 +1,4 @@
-// pages/shop/shop.js
+// pages/login/login.js
 Page({
 
   /**

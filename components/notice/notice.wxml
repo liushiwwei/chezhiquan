@@ -1,4 +1,0 @@
-<!--components/notice/notice.wxml-->
-<view class='left'>
-  <image src='{{obj.img_url}}'></image>
-</view>

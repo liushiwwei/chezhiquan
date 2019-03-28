@@ -1,15 +1,112 @@
 <!-- pages/serve/serve.wxml -->
+<!-- 服务页面 -->
+<!-- 顶部4个按钮 -->
 <view class="weui-flex nav">
-    <view class="weui-flex__item">
-        <view class="placeholder">weui</view>
+  <view class="nav_top">
+    <image src='/static/simg/repair.png'></image>
+    <text>我要维修</text>
+  </view>
+  <view class="nav_top">
+    <image src='/static/simg/maintain.png'></image>
+    <text>我要保养</text>
+  </view>
+  <view class="nav_top">
+    <image src='/static/simg/inspect.png'></image>
+    <text>安全检查</text>
+  </view>
+  <view class="nav_top">
+    <image src='/static/simg/insurance.png'></image>
+    <text>保险</text>
+  </view>
+</view>
+<!-- 流量充值和电话报警按钮 -->
+<view class='fluxc'>
+  <block wx:for="{{fluxc}}" wx:key="{{item.id}}">
+    <view class='block' bindtap='llclick' data-clid='{{item.id}}'>
+      <image class='topImg' src='{{item.img_urlflux}}'>
+        <text>{{item.textc}}</text>
+      </image>
+      <text class='weight'>{{item.innertext}}</text>
+      <text class='llcz'>立即{{item.click}}</text>
+      <image class='rigImg' src='{{item.img_urlllch}}'></image>
     </view>
-    <view class="weui-flex__item">
-        <view class="placeholder">weui</view>
+  </block>
+</view>
+<!-- 服务工单三个导航键 -->
+<view class='server'>
+  <text class='gongdan'>服务工单</text>
+  <!-- 上面 -->
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick" slider='{{sliderOffset}}'>
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}rpx); -webkit-transform: translateX({{sliderOffset}}rpx);"></view>
+  </view>
+  <!-- 下面 -->
+  <view class='sss'>
+    <view class="weui-tab__panel">
+      <!-- 维修的内容 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='top'>
+          <text class='left'>车智犬</text>
+          <text class='right'>已下单</text>
+        </view>
+        <view class='mid'>
+          <image src='{{serve[0].img_url}}'></image>
+          <text class='txtop'>电瓶车维修中心(宝安区螳螂店)</text>
+          <text class='txmid'>更换d电瓶/车头灯</text>
+          <text class='txbot'>2019-03-13</text>
+        </view>
+        <view class='bot'>
+          查看更多>>
+        </view>
+      </view>
+      <!-- 保养的内容 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='top'>
+          <text class='left'>车智犬</text>
+          <text class='right'>已下单</text>
+        </view>
+        <view class='mid'>
+          <image src='{{serve[1].img_url}}'></image>
+          <text class='txtop'>{{serve[1].text1}}</text>
+          <text class='txmid'>{{serve[1].text2}}</text>
+          <text class='txbot'>{{serve[1].text3}}</text>
+        </view>
+        <view class='bot'>
+          查看更多>>
+        </view>
+      </view>
+      <!-- 安检的内容 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class='top'>
+          <text class='left'>车智犬</text>
+          <text class='right'>已下单</text>
+        </view>
+        <view class='mid'>
+          <image src='{{serve[2].img_url}}'></image>
+          <text class='txtop'>{{serve[2].text1}}</text>
+          <text class='txmid'>{{serve[2].text2}}</text>
+          <text class='txbot'>{{serve[2].text3}}</text>
+        </view>
+        <view class='bot'>
+          查看更多>>
+        </view>
+      </view>
     </view>
-    <view class="weui-flex__item">
-        <view class="placeholder">weui</view>
-    </view>
-    <view class="weui-flex__item">
-        <view class="placeholder">weui</view>
-    </view>
+  </view>
+
+  <!-- 最下面的附近门店 -->
+  <view class='store'>
+    <text class='sleft'>附近门店</text>
+    <text class='sright'>更多门店>></text>
+    <image class='botmap' src='/static/simg/botmap.png'></image>
+     <view class='mapimg'>
+     <image src='{{serve[1].img_url}}'></image>
+     <text>马鞍山服务中心</text>
+     </view>
+     <image class='dingwei' src='/static/simg/dingwei.png'></image>
+  </view>
 </view>

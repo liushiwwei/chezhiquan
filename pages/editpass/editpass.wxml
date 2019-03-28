@@ -1,0 +1,37 @@
+<!--pages/editpass/editpass.wxml-->
+<view class='container'>
+  <form bindsubmit='formSubmit'>
+    <view class='top'>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>旧密码：</view>
+          <view>
+            <input password='true' placeholder="请输入旧密码" name="oldMi" maxlength='20'></input>
+          </view>
+        </view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>新密码：</view>
+          <view>
+            <input password='true' placeholder="请输入新密码" name="newMi" maxlength='20'></input>
+          </view>
+        </view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>确认密码：</view>
+          <view>
+            <input password='true' name="newMi2" placeholder="请再次输入新密码" maxlength='20'></input>
+          </view>
+        </view>
+      </view>
+      <view class='xx_line'></view>
+    </view>
+
+    <button form-type="submit" class='btn'>确认</button>
+
+  </form>
+</view>

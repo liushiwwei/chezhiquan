@@ -1,0 +1,50 @@
+/* pages/my/my.wxss */
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+}
+.top{
+  width: 750rpx;
+  height: 210rpx;
+  position: relative;
+  background-color: #fff;
+}
+.top image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 66rpx;
+  margin-left: 62rpx;
+}
+.top .mobil {
+  font-size: 40rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  position: absolute;
+  top: 50rpx;
+  margin-left: 40rpx;
+}
+.top .czvip{
+  font-size: 24rpx;
+  line-height: 24rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 130rpx;
+  color: #4bc4f7;
+}
+.top .txvip{
+  font-size: 24rpx;
+  line-height: 24rpx;
+  position: absolute;
+  left: 190rpx;
+  top: 110rpx;
+  color: #666;
+}
+
+.weui-cells{
+  border-bottom: none;
+}
+.weui-cells_after-title{
+ border-bottom: none;
+}

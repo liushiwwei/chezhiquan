@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/shop/shop",
     "pages/serve/serve",
-    "pages/self/self",
     "pages/ssmap/ssmap",
     "pages/rail/rail",
-    "pages/trail/trail"
+    "pages/trail/trail",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/editpass/editpass"
   ],
   "permission": {
     "scope.userLocation": {
@@ -17,7 +19,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fbfbfb"
   },
   "tabBar": {
     "color": "#333333",
@@ -28,27 +31,22 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/static/img/index.png",
-        "selectedIconPath": "/static/img/sindex.png"
-      },
-      {
-        "pagePath": "pages/shop/shop",
-        "text": "商城",
-        "iconPath": "/static/img/shop.png",
-        "selectedIconPath": "/static/img/sshop.png"
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/sindex.png"
       },
       {
         "pagePath": "pages/serve/serve",
         "text": "服务",
-        "iconPath": "/static/img/serve.png",
-        "selectedIconPath": "/static/img/sserve.png"
+        "iconPath": "static/img/serve.png",
+        "selectedIconPath": "static/img/sserve.png"
       },
       {
-        "pagePath": "pages/self/self",
+        "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "/static/img/mmy.png",
-        "selectedIconPath": "/static/img/smmy.png"
+        "iconPath": "static/img/mmy.png",
+        "selectedIconPath": "static/img/smmy.png"
       }
     ]
-  }
+  },
+  "usingComponents": {}
 }

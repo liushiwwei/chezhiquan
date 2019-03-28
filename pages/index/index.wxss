@@ -1,3 +1,8 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+}
 swiper {
   width: 750rpx;
   height: 370rpx;
@@ -11,7 +16,7 @@ swiper image {
 .leftgps {
   width: 158rpx;
   height: 50rpx;
-  background-color: #3ea1af;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8rpx;
   position: absolute;
   top: 10rpx;

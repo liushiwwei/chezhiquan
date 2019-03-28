@@ -1,0 +1,31 @@
+<!--pages/register/register.wxml-->
+<view class='bigbg' style='background-color:#032754;background-size:100% 100%;'>
+  <form class='ffrom' bindsubmit='formSubmit'>
+    <!-- 账号密码框 -->
+    <view class='loging'>
+      <!-- 手机号 -->
+      <view class='user'>
+        <image src='/images/USERicon.png'></image>
+        <input class="umobil" auto-focus placeholder="手机号码" name="mobil" placeholder-class='lolol' maxlength="11" />
+      </view>
+      <!-- 密码 -->
+      <view class='password'>
+        <image src='/images/PASSicon.png'></image>
+        <input class="logpass" password type="text" name="passWord" placeholder="密码" placeholder-class='lolol' />
+      </view>
+      <!-- 确认密码 -->
+      <view class='password'>
+        <image src='/images/PASSicon.png'></image>
+        <input class="logpass" password type="text" name="passWord2" placeholder="确认密码" placeholder-class='lolol' />
+      </view>
+      <!-- 验证码 -->
+      <view class='userCode'>
+        <image src='/images/codeicon.png'></image>
+        <input class="logcode" password type="text" name="userCode" placeholder="验证码" maxlength="10" placeholder-class='lolol' />
+        <button disabled='{{disabled}}' bindtap="goGetCode">{{code}}</button>
+      </view>
+    </view>
+    <!-- 注册按钮-->
+      <button form-type="submit" class='btn'>注册</button>
+  </form>
+</view>

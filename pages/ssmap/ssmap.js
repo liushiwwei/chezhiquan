@@ -8,6 +8,7 @@ Page({
     lat: '',
     long: '',
     speed: '',
+    mapSt:null
   },
 
   /**
@@ -37,7 +38,7 @@ Page({
     })
     _this.mapCtx.moveToLocation();
 
-    var mapSt = setInterval(    //设定一个定时器
+    this.mapSt = setInterval(    //设定一个定时器
       function spe() {
 
         wx.getLocation({
@@ -89,7 +90,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    clearInterval(mapSt)
+    clearInterval(this.mapSt)
   },
 
   /**
