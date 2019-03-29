@@ -65,7 +65,19 @@ Page({
       url: '/pages/ssmap/ssmap',
     })
   },
+// 历史轨迹
+  lsgj(){
+    wx.navigateTo({
+      url: '/pages/ssmap/ssmap',
+    })
+  },
 
+  // 电子围栏
+dzwl(){
+  wx.navigateTo({
+    url: '/pages/enclosure/enclosure',
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */

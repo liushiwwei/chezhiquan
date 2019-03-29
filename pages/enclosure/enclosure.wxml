@@ -1,0 +1,33 @@
+<!--pages/ssmap/ssmap.wxml-->
+<map id='myMap' 
+latitude="{{latitude}}" 
+longitude="{{longitude}}" 
+markers="{{markers}}" 
+circles='{{circles}}'
+scale="{{scale}}" 
+show-location>
+  <cover-view class='editPass'>
+      <cover-view class='bgblock'>
+          <!-- 加减 -->
+          <cover-image class='minus' catchtap='minus' src='/images/minus.png'></cover-image>
+              <cover-view class='_jindu'>
+                  <cover-view class='midd'></cover-view>
+                  <cover-view style='width:{{total}}%' class='jindu2'></cover-view>
+              </cover-view>
+          <cover-image class='add' catchtap='add' src='/images/add.png'></cover-image>
+
+          <!-- 开关 -->
+          <block  wx:if="{{weolan===true}}">
+              <cover-view class='text1'>已启动</cover-view>
+          </block>
+          <block wx:elif="{{weolan===false}}">
+              <cover-view class='text2'>待启动</cover-view>
+           </block>
+           <cover-view class='fanwmi'>范围{{xxx}}米</cover-view>
+        <cover-view class='weilan'>
+            <cover-image src='{{weolan?kai:guan}}' catchtap='weilan' />
+        </cover-view>
+      </cover-view>
+  </cover-view>
+
+</map>
