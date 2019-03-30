@@ -1,6 +1,6 @@
-<!--pages/rail/rail.wxml-->
-<block wx:for="{{rail}}" wx:key="{{item.id}}">
-  <view class='rail' data-id='{{item.id}}'>
+<!--pages/shock/shock.wxml-->
+<block wx:for="{{shock}}" wx:key="{{item.id}}">
+  <view class='shock' data-id='{{item.id}}'>
     <view class='left'>
       <text class='text1'>{{item.text1}}</text>
       <text class='text2'>{{item.text2}}</text>

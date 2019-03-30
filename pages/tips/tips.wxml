@@ -1,0 +1,13 @@
+<!--pages/tips/tips.wxml-->
+
+<block wx:for="{{tips}}" wx:key="{{item.id}}">
+  <view class='tips' bindtap='tip' data-id='{{item.id}}'>
+    <view class='left'>
+      <text class='text1'>{{item.text1}}</text>
+      <text class='text2'>{{item.text2}}</text>
+    </view>
+    <view class='right'>
+      <image src='/images/levicon.png'></image>
+    </view>
+  </view>
+</block>

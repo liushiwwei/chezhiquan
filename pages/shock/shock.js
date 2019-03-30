@@ -1,5 +1,5 @@
-// pages/rail/rail.js
-import rail from '../../datas/rail.js'
+// pages/shock/shock.js
+import shock from '../../datas/shock.js'
 Page({
 
   /**
@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      rail
+      shock
     })
   },
 

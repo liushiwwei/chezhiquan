@@ -1,11 +1,11 @@
-/* pages/rail/rail.wxss */
+/* pages/callbj/callbj.wxss */
 page {
   display: block;
   min-height: 100%;
   background-color: #f6f6f6;
 }
 
-.rail {
+.callbj {
   width: 750rpx;
   height: 120rpx;
   display: flex;
@@ -15,7 +15,7 @@ page {
   margin-top: 5rpx;
 }
 
-.rail .left {
+.callbj .left {
   margin-left: 20rpx;
   flex-wrap: wrap;
   width: 270rpx;
@@ -23,7 +23,7 @@ page {
   position: relative;
 }
 
-.rail .left .text1 {
+.callbj .left .text1 {
   font-size: 32rpx;
   line-height: 32rpx;
   color: #333;
@@ -31,24 +31,41 @@ page {
   top: 25rpx;
 }
 
-.rail .left .text2 {
-  font-size: 20rpx;
-  line-height: 20rpx;
+.callbj .left .text2 {
+  font-size: 22rpx;
+  line-height: 22rpx;
   color: #999;
   position: absolute;
   bottom: 22rpx;
 }
+.callbj .left .text4{
+  font-size: 22rpx;
+  line-height: 22rpx;
+  color: #999;
+  position: absolute;
+  bottom: 22rpx;
+  left: 150rpx;
+}
 
-.rail .right{
+.callbj .right{
   flex: 1;
   height: 120rpx;
   position: relative;
 }
 
-.rail .right .text3{
+.callbj .right .text3{
   font-size: 32rpx;
   line-height: 32rpx;
   color: #333;
   position: absolute;
   top: 26rpx;
+}
+
+.callbj .right .text5{
+  font-size: 23rpx;
+  line-height: 23rpx;
+  color: #999;
+  position: absolute;
+  bottom: 22rpx;
+  right: 50rpx;
 }

@@ -14,7 +14,7 @@
     <view class="weui-cell__bd">我的保险</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="/pages/manage/manage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="../../static/mimg/shebei.png" style="margin-right: 20rpx;vertical-align: middle;width:45rpx; height: 40rpx;"></image>
     </view>

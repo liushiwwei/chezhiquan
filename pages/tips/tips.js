@@ -1,12 +1,13 @@
-// pages/rail/rail.js
-import rail from '../../datas/rail.js'
+// pages/tips/tips.js
+// 引入js
+import tips from '../../datas/tips.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tips:[]
   },
 
   /**
@@ -14,10 +15,31 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      rail
+      tips
     })
   },
 
+  tip(e){
+    console.log(e.currentTarget.dataset.id)
+    var dd = e.currentTarget.dataset.id
+    if(dd==1){
+      wx.navigateTo({
+        url: '/pages/shock/shock',
+      })
+    }else if(dd==2){
+      wx.navigateTo({
+        url: '/pages/alarm/alarm',
+      })
+    } else if (dd == 3) {
+      wx.navigateTo({
+        url: '/pages/callbj/callbj',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/rail/rail',
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

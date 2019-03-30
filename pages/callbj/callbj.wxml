@@ -1,12 +1,15 @@
-<!--pages/rail/rail.wxml-->
-<block wx:for="{{rail}}" wx:key="{{item.id}}">
-  <view class='rail' data-id='{{item.id}}'>
+<!--pages/callbj/callbj.wxml-->
+<block wx:for="{{callbj}}" wx:key="{{item.id}}">
+  <view class='callbj' data-id='{{item.id}}'>
     <view class='left'>
       <text class='text1'>{{item.text1}}</text>
       <text class='text2'>{{item.text2}}</text>
+      <text class='text4'>{{item.text4}}</text>
     </view>
     <view class='right'>
       <text class='text3'>{{item.text3}}</text>
+      <text class='text5'>{{item.text5}}</text>
     </view>
   </view>
 </block>
+

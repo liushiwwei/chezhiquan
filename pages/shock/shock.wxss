@@ -1,11 +1,11 @@
-/* pages/rail/rail.wxss */
+/* pages/shock/shock.wxss */
 page {
   display: block;
   min-height: 100%;
   background-color: #f6f6f6;
 }
 
-.rail {
+.shock {
   width: 750rpx;
   height: 120rpx;
   display: flex;
@@ -15,7 +15,7 @@ page {
   margin-top: 5rpx;
 }
 
-.rail .left {
+.shock .left {
   margin-left: 20rpx;
   flex-wrap: wrap;
   width: 270rpx;
@@ -23,7 +23,7 @@ page {
   position: relative;
 }
 
-.rail .left .text1 {
+.shock .left .text1 {
   font-size: 32rpx;
   line-height: 32rpx;
   color: #333;
@@ -31,7 +31,7 @@ page {
   top: 25rpx;
 }
 
-.rail .left .text2 {
+.shock .left .text2 {
   font-size: 20rpx;
   line-height: 20rpx;
   color: #999;
@@ -39,13 +39,13 @@ page {
   bottom: 22rpx;
 }
 
-.rail .right{
+.shock .right{
   flex: 1;
   height: 120rpx;
   position: relative;
 }
 
-.rail .right .text3{
+.shock .right .text3{
   font-size: 32rpx;
   line-height: 32rpx;
   color: #333;

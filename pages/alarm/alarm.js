@@ -1,5 +1,6 @@
-// pages/rail/rail.js
-import rail from '../../datas/rail.js'
+// pages/alrm/alarm.js
+// 引入js
+import alarm from '../../datas/alarm.js'
 Page({
 
   /**
@@ -14,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      rail
+      alarm
     })
   },
 

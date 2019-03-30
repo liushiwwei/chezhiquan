@@ -1,0 +1,220 @@
+/* pages/manage/manage.wxss */
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.love {
+  width: 250rpx;
+  height: 65rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #bbb;
+  margin: 0 auto;
+  margin-top: 400rpx;
+}
+
+.love .lo {
+  margin-bottom: 18rpx;
+}
+
+.dog {
+  width: 162rpx;
+  height: 140rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+}
+
+.dog image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 显示有设备的样式 */
+
+.manage {
+  width: 750rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 5rpx;
+}
+
+.manage .left {
+  flex-wrap: wrap;
+  width: 420rpx;
+  height: 120rpx;
+  position: relative;
+  margin-left: -160rpx;
+}
+
+.manage .left .text1 {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  position: absolute;
+  top: 25rpx;
+}
+
+.manage .left .text2 {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #999;
+  position: absolute;
+  bottom: 22rpx;
+}
+
+.manage .right {
+  flex: 1;
+  height: 120rpx;
+  position: relative;
+  margin-right: -150rpx;
+}
+
+.manage .right .text3 {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  position: absolute;
+  top: 26rpx;
+}
+
+movable-area {
+  width: 750rpx;
+  height: 120rpx;
+  z-index: 3;
+  margin-top: 8rpx;
+}
+
+movable-view {
+  width: 990rpx;
+  height: 120rpx;
+  z-index: 1;
+}
+
+.delet_btn {
+  width: 120rpx;
+  height: 118rpx;
+  background-color: #ff5f5f;
+  margin-top: -118rpx;
+  position: absolute;
+  right: 0;
+  z-index: 4;
+}
+
+.delet_btn image {
+  width: 40rpx;
+  height: 45rpx;
+  margin-top: 39rpx;
+}
+
+.edit_btn {
+  width: 120rpx;
+  height: 118rpx;
+  background-color: #4bc4f7;
+  margin-top: -118rpx;
+  position: absolute;
+  right: 120rpx;
+}
+
+.edit_btn image {
+  width: 40rpx;
+  height: 45rpx;
+  margin-top: 39rpx;
+}
+
+/* 大弹出框*/
+
+.boss {
+  width: 100%;
+  height: 420rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* 弹出框 */
+
+.toast-box {
+  width: 570rpx;
+  height:340rpx;
+  position: fixed;
+  margin: -200rpx  auto;
+  z-index: 88;
+  opacity: 0.9;
+}
+
+/* 阴影遮罩层的 */
+
+.toastbg {
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}
+
+.showToast {
+  position: absolute;
+  width: 100%;
+}
+
+.toast-title {
+  width: 100%;
+  height: 70rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 40rpx;
+  border-top-left-radius:15rpx; 
+  border-top-right-radius: 15rpx;
+}
+
+.toast-main {
+  width: 100%;
+  height: 56rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  background-color: #fff;
+  text-align: center;
+}
+
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+
+.toast-button {
+  display: flex;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  background-color: #fff;
+  height: 78rpx;
+  border-top: 2rpx solid #f6f6f6;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.button1 {
+  width: 50%;
+  border: none;
+  font-size: 33rpx;
+  color: #333;
+  border-right: 1rpx solid #f6f6f6;
+}
+
+.button2 {
+  width: 50%;
+  border: none;
+  font-size: 33rpx;
+  color: #333;
+  border-left: 1rpx solid #f6f6f6;
+}
+

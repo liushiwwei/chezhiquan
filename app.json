@@ -9,7 +9,13 @@
     "pages/login/login",
     "pages/register/register",
     "pages/editpass/editpass",
-    "pages/enclosure/enclosure"
+    "pages/enclosure/enclosure",
+    "pages/tips/tips",
+    "pages/shock/shock",
+    "pages/alarm/alarm",
+    "pages/callbj/callbj",
+    "pages/manage/manage",
+    "pages/edti/edi"
   ],
   "permission": {
     "scope.userLocation": {

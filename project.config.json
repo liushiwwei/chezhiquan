@@ -57,7 +57,7 @@
 				{
 					"id": 2,
 					"name": "1",
-					"pathName": "pages/enclosure/enclosure",
+					"pathName": "pages/manage/manage",
 					"query": "",
 					"scene": null
 				}

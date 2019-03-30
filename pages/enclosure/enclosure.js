@@ -15,14 +15,14 @@ Page({
     mapSt: null,
     scale: 18,
     circles: [],
-    radius:0,
-    xxx:4
+    radius: 0,
+    xxx: 4
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     this.mapCtx = wx.createMapContext('myMap') //创建一个全局的MapContext实例，并且和组建的<map> 的id绑定
 
   },
@@ -30,21 +30,21 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
     // this.mapCtx.moveToLocation()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     var _this = this;
     this.mapCtx = wx.createMapContext('myMap') //创建一个全局的MapContext实例，并且和组建的<map> 的id绑定
 
     // 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用。
     wx.getLocation({
       type: "gcj02",
-      success: function(res) {
+      success: function (res) {
         // 请求成功,存储坐标信息
         _this.setData({
           latitude: res.latitude,
@@ -90,10 +90,10 @@ Page({
   add() {
     var _this = this;
     var total = this.data.total;
-    if(total<100){
+    if (total < 100) {  //小于100就+   超过一百就没反应
       this.setData({
-        total: total + 4,
-        xxx: total+4
+        total: total + 4,  //用来反应进度条和计算半径的
+        xxx: 2 * (total + 4)       //反应多少米
       })
     }
     wx.getLocation({
@@ -117,15 +117,14 @@ Page({
             longitude: _this.data.longitude,
             color: '#4BC4F740',
             fillColor: '#7cb5ec80',
-            radius: _this.data.total*2,
+            radius: _this.data.total * 2,
             strokeWidth: 0.1
           }]
 
         })
-        console.log(_this.data.circles[0].radius)
+        console.log('我是半径' + _this.data.circles[0].radius)
       }
     })
-    console.log(this.data.total)
     console.log(this.data)
     return
   },
@@ -134,10 +133,10 @@ Page({
   minus() {
     var _this = this;
     var total = this.data.total;
-    if(total>0){
+    if (total > 0) {
       this.setData({
-        total: total - 4,
-        xxx:total-4
+        total: total - 4, //用来反应进度条和计算半径的
+        xxx: 2 * (total - 4)       //反应多少米
       })
     }
     wx.getLocation({
@@ -161,63 +160,49 @@ Page({
             longitude: _this.data.longitude,
             color: '#4BC4F740',
             fillColor: '#7cb5ec80',
-            radius: _this.data.total*2,
+            radius: _this.data.total * 2,
             strokeWidth: 0.1
           }]
 
         })
-        console.log(_this.data.circles[0].radius)
+        console.log('我是半径' + _this.data.circles[0].radius)
       }
     })
-    console.log(this.data.total)
     return
   },
 
-
-  // minuss(){
-  //   if (this.data.weolan == false) {
-  //     this.setData({
-  //       total: 0
-  //     })
-  //   }
-  //   var total = this.data.total;
-  //   this.setData({
-  //     total: total -1
-  //   })
-  //   console.log(this.data.total)
-  // },
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

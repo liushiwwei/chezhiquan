@@ -1,5 +1,4 @@
-// pages/rail/rail.js
-import rail from '../../datas/rail.js'
+// pages/edti/edi.js
 Page({
 
   /**
@@ -13,9 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      rail
-    })
+
   },
 
   /**

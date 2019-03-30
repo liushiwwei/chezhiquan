@@ -18,12 +18,12 @@
     </picker>
   </view>
   <!-- 通知模块 -->
-  <view class='notice'>
-    <image class='yuan1' src='/static/img/yuan1.png'>
+  <navigator  class='notice' url='/pages/tips/tips'>
+  <image class='yuan1' src='/static/img/yuan1.png'>
       <!-- <image src='/static/img/notice2.png'/> -->
     </image>
     <image class='notice2' src='/static/img/notice2.png' />
-  </view>
+  </navigator>
   <!-- 选择车辆功能区域 -->
   <view class='cut'>
     <view class='cut_car'>
