@@ -1,4 +1,5 @@
-export default [{
+export default [
+  {
   "id": 1,
   "text1": "警铃报警23秒",
   "text2": "2019-03-13",

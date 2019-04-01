@@ -18,7 +18,7 @@
               <text class='text2'>{{item.text2}}</text>
           </view>
       </view> 
-       <view class='delet_btn' data-index='{{index}}' bindtap='delect_tap'>
+       <view class='delet_btn' data-index='{{index}}' bindtap='delect_tap' hidden=''>
             <image src='/images/electicon.png'></image>
        </view>
        <view class='edit_btn' data-index='{{index}}' bindtap='edit_tap'>
@@ -28,7 +28,30 @@
   </movable-area>
   
 </block>
-
+<!-- 删除提示弹框 -->
+<!-- <view class='boss1'>
+  <view class='toast-box' hidden='{{!fName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>提示</text>
+            </view>
+            <view class='toast-main'>
+                
+            </view>
+            <view class='toast-button'>
+                <view class='button1' bindtap='cancel'>
+                    取消
+                </view>
+                <view class='button2' bindtap='confirm'>
+                   确定
+                </view>
+              
+            </view>
+        </view>
+    </view>
+</view> -->
+<!-- 修改弹框 -->
 <view class='boss'>
   <view class='toast-box' hidden='{{!ifName}}'>
         <view class='toastbg'></view>
@@ -38,7 +61,7 @@
             </view>
             <view class='toast-main'>
                 <view class='toast-input'>
-                    <input placeholder='请输入姓名' data-name='stuEidtName'></input>
+                    <input placeholder='请输入姓名' bindinput='binput' data-name='stuEidtName'></input>
                 </view>
             </view>
             <view class='toast-button'>
@@ -48,6 +71,7 @@
                 <view class='button2' bindtap='confirm'>
                    确定
                 </view>
+              
             </view>
         </view>
     </view>

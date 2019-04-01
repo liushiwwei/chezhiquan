@@ -7,7 +7,7 @@ page {
 /* 头部导航的样式 */
 
 .nav {
-  width: 700rpx;
+  width: 750rpx;
   height: 200rpx;
   margin: 0 auto;
   background-color: #fff;

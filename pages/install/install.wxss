@@ -1,0 +1,68 @@
+/* pages/install/install.wxss */
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+}
+
+.install{
+  margin-top: 10rpx;
+}
+.install .stroge{
+  width: 712rpx;
+  height: 32rpx;
+  background-color: #fff;
+  text-align: left;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding: 44rpx 0;
+  padding-left: 38rpx;
+  margin-bottom: 5rpx;
+}
+/* 报警时长 */
+.install .times{
+  width: 712rpx;
+  height: 32rpx;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+  line-height: 32rpx;
+  padding: 44rpx 0;
+  padding-left: 38rpx;
+  position: relative;
+}
+
+.install .times .left{
+  font-size: 33rpx;
+  line-height: 33rpx;
+}
+.install .times .right{
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #999;
+  position: absolute;
+  right: 20rpx;
+}
+
+/* 报警提示 */
+.install .bjTip{
+  width: 712rpx;
+  height: 32rpx;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+  line-height: 32rpx;
+  padding: 44rpx 0;
+  padding-left: 38rpx;
+  position: relative;
+}
+
+.install .bjTip .left{
+  font-size: 33rpx;
+  line-height: 33rpx;
+}
+.install .bjTip .right{
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #999;
+  position: absolute;
+  right: 20rpx;
+}

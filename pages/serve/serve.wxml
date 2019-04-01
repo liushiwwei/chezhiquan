@@ -14,10 +14,6 @@
     <image src='/static/simg/inspect.png'></image>
     <text>安全检查</text>
   </view>
-  <view class="nav_top">
-    <image src='/static/simg/insurance.png'></image>
-    <text>保险</text>
-  </view>
 </view>
 <!-- 流量充值和电话报警按钮 -->
 <view class='fluxc'>

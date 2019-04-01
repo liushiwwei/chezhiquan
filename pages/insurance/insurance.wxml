@@ -1,0 +1,34 @@
+
+<!-- 上面推荐部分 -->
+<view class='groom'>
+  <view class='tuijian'>为你推荐</view>
+<!-- 盒子里面 -->
+  <view class='content' bindtap='navtoCar'>
+        <view class='left'>
+          <image src='/static/img/listimg.jpg'></image>
+        </view>
+      <view class='right'>
+          <view class='tx1'>电动车安全出行险</view>
+          <view class='tx2'>出行安全  路途意外  可享团购</view>
+          <view class='tx3'>250元起</view>
+          <view class='tx4'>车智犬保险</view>
+      </view>
+  </view>
+</view>
+<!-- 下面保险列表部分 -->
+<view class='list'>
+  <view class='tx5'>精质优选</view>
+  <block wx:for="{{list}}" wx:key="">
+  <view class='insurance' bindtap='maimaimai'  id="{{item.id}}">
+        <view class='left'>
+          <image src='{{item.img_url}}'></image>
+        </view>
+      <view class='right'>
+          <view class='name'>{{item.name}}</view>
+          <view class='lists'>{{item.lists}}</view>
+          <view class='price'>{{item.price}}</view>
+          <view class='mold'>{{item.mold}}</view>
+      </view>
+  </view>
+  </block>
+</view>

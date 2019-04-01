@@ -1,4 +1,4 @@
-// pages/login/login.js
+// pages/about/about.js
 Page({
 
   /**
@@ -14,11 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  retrieve(){
-    wx.navigateTo({
-      url: '/pages/retrieve/retrieve',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

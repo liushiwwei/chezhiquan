@@ -1,0 +1,16 @@
+<!--pages/install/install.wxml-->
+<view class='install'>
+  <view class='stroge'>清除缓存</view>
+  <view class='times'>
+    <picker bindchange="bindPickerChangeTime" value="{{index}}" range="{{times}}">
+      <text class='left'>报警时长设置</text>
+      <text class='right'>{{state}}</text>
+    </picker>
+  </view>
+  <view class='bjTip'>
+    <picker bindchange="bindPickerChangeTips" value="{{idx}}" range="{{tips}}">
+      <text class='left'>报警提示设置</text>
+      <text class='right'>{{stata}}</text>
+    </picker>
+  </view>
+</view>

@@ -16,5 +16,13 @@ export default [
     "innertext": "电话报警",
     "click": "开通",
     "onoff": false
-  },
+  }, {
+    "id": 3,
+    "img_urlflux": "/static/simg/call.png",
+    "img_urlllch": "/static/simg/callch.png",
+    "textc": "来电",
+    "innertext": "电话报警",
+    "click": "开通",
+    "onoff": false
+  }
 ]

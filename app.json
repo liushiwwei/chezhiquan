@@ -15,7 +15,12 @@
     "pages/alarm/alarm",
     "pages/callbj/callbj",
     "pages/manage/manage",
-    "pages/edti/edi"
+    "pages/edti/edi",
+    "pages/retrieve/retrieve",
+    "pages/about/about",
+    "pages/install/install",
+    "pages/insurance/insurance",
+    "pages/buysafe/buysafe"
   ],
   "permission": {
     "scope.userLocation": {

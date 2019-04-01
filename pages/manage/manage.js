@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // manage数组长度进行判断
     lovec:1,
     manage:[],
     // x轴方向的偏移
@@ -15,6 +16,9 @@ Page({
     idx:0,
     // 修改的遮罩层
     ifName:false,
+    fName:false,
+    // 修改的名字value
+    entry:""
   },
 
   /**
@@ -24,7 +28,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       manage,
-      ifName: true,
+      ifName: false,
+      fName: false,
     })
     
   },
@@ -86,14 +91,20 @@ Page({
   // 修改功能
   edit_tap(e){
     var _this =this;
+    // 点击修改,把相对于id存入
+    console.log(e.currentTarget.dataset.index)
+    // _this.setData({
+      
+    // })
     wx.showModal({
       title: '亲!您好',
       content: '是否要修改您的车名',
       success:function(res){
-        console.log(res)
+       
         if(res.confirm==true){
           _this.setData({
-            ifName: true
+            ifName: true,
+            idx: e.currentTarget.dataset.index
           })
         }else{
          _this.setData({
@@ -106,14 +117,42 @@ Page({
 // 修改取消
   cancel(e){
     var _this = this;
+    var id = _this.data.idx   //当前修改的id
+    var manageb = this.data.manage
+    console.log(this.data.manage)
+    manageb[id].x = 0
     _this.setData({
-      ifName: false
+      manege: manageb,
+      ifName: false,
+      fName:false
     })
+    _this.onLoad()
   },
   // 确认修改
   confirm(e){
     var _this = this;
-
+    var manageb = this.data.manage   //所有数据
+    var id = _this.data.idx   //当前修改的id
+    var entry = _this.data.entry   //当前修改的input的value
+    manageb[id].text1 = entry
+    _this.setData({
+      manege:manageb,
+      ifName: false
+    })
+    wx.showToast({
+      title: '已修改成功',
+      icon: 'success',
+      duration: 1500,
+      success:function(res){
+        console.log(res)
+      }
+    });
+  },
+  binput(e){
+    // console.log(e)
+    this.setData({
+      entry: e.detail.value
+    })
   },
 
   /**
