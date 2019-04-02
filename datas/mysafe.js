@@ -1,0 +1,42 @@
+export default [{
+  "id": 0,
+  "img_url": "/images/pingan.png",
+  "name": "电动车平安行险",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "9.90元起",
+}, {
+  "id": 1,
+    "img_url": "/images/pingan.png",
+  "name": "太平洋安全线",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "19.90元起",
+},
+{
+  "id": 2,
+  "img_url": "/images/pingan.png",
+  "name": "出入平安险",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "999.90元起",
+},
+{
+  "id": 3,
+  "img_url": "/images/pingan.png",
+  "name": "出入平安险",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "999.90元起",
+},
+{
+  "id": 4,
+  "img_url": "/images/pingan.png",
+  "name": "出入平安险",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "999.90元起",
+},
+{
+  "id": 5,
+  "img_url": "/images/pingan.png",
+  "name": "出入平安险",
+  "lists": "路途意外/大陆境内/可享团购",
+  "price": "999.90元起",
+},
+]

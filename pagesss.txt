@@ -1,33 +1,35 @@
+[[我的]]
 index  首页				static  是自建js数据
-my   我的 页
-serve   服务页
 
+enclosure    电子围栏页
+ssmap        实时定位页
 
-enclosure  电子围栏页
-ssmap    实时定位页
-
-
-
-tips   首页右上角提示  警告信息页
-		rail   警告信息里的  围栏报警页
-		alrm    警告信息里的  警铃报警页
+tips   首页右上角提示    警告信息页
+		rail     警告信息里的  围栏报警页
+		alarm    警告信息里的  警铃报警页
 		callbj   警告信息里的  电话报警页
 		shock    警告信息里的  震动报警页
 
+[[服务]]
+serve   服务页
+	insurance  保险页面   ==>buysafe   购买保险页面
+	fortify    设防流量充值
+	mobil    电话报警充值
+
+
 
 [[我的]]
-register    注册页
-login    登录页
-retrieve   找回密码页
-
-insurance  保险页面   ==>buysafe   购买保险页面
-manage    我的  设备管理页    
-editpass   修改密码页
-about  关于我们页面
-install  我的-设置
-
-
-保险订单页面    流量充值 和 电话充值  
+my   我的
+		manage    我的  设备管理页    
+		editpass   修改密码页
+		about  关于我们页面
+		install  我的-设置
+			register    注册页
+			login    登录页
+			retrieve   找回密码页
+		mysafe  我的保险
+		record   充值记录
+保险订单页面  
 
 
 

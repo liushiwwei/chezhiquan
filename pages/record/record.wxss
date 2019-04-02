@@ -1,0 +1,6 @@
+/* pages/record/record.wxss */
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+}

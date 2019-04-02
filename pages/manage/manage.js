@@ -142,10 +142,13 @@ Page({
     wx.showToast({
       title: '已修改成功',
       icon: 'success',
-      duration: 1500,
+      duration: 2500,
       success:function(res){
-        console.log(res)
+        wx.redirectTo({
+         url: '/pages/manage/manage',
+       })
       }
+       
     });
   },
   binput(e){

@@ -139,10 +139,10 @@ swiper image {
 .car_xinxi .dianchi .dianv {
   margin-left: 110rpx;
   position: absolute;
-  bottom: 30rpx;
+  bottom: 43rpx;
   font-size: 22rpx;
   line-height: 22rpx;
-  color: #c9c9c9;
+  color: #666;
 }
 
 /* 今日里程信息 */
@@ -170,10 +170,10 @@ swiper image {
 .car_xinxi .todaylu .tkm {
   font-size: 22rpx;
   line-height: 22rpx;
-  color: #c9c9c9;
+  color: #666;
   margin-left: 20rpx;
   position: absolute;
-  bottom: 30rpx;
+  bottom: 43rpx;
 }
 
 /* 总里程信息 */
@@ -199,10 +199,10 @@ swiper image {
 .car_xinxi .totallu  .tkm{
    font-size: 22rpx;
   line-height: 22rpx;
-  color: #c9c9c9;
+  color: #666;
   margin-left: 20rpx;
   position: absolute;
-  bottom: 30rpx;
+  bottom: 43rpx;
 }
 
 /* 开关启动设防 */

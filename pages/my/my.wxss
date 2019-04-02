@@ -22,7 +22,7 @@ page {
   line-height: 40rpx;
   font-weight: bold;
   position: absolute;
-  top: 50rpx;
+  top: 90rpx;
   margin-left: 40rpx;
 }
 .top .czvip{
@@ -32,6 +32,14 @@ page {
   right: 40rpx;
   top: 130rpx;
   color: #4bc4f7;
+}
+.top .record{
+    font-size: 26rpx;
+  line-height: 26rpx;
+  position: absolute;
+  color: #4bc4f7;
+  top: 18rpx;
+  right: 45rpx;
 }
 .top .txvip{
   font-size: 24rpx;

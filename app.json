@@ -20,7 +20,11 @@
     "pages/about/about",
     "pages/install/install",
     "pages/insurance/insurance",
-    "pages/buysafe/buysafe"
+    "pages/buysafe/buysafe",
+    "pages/fortify/fortify",
+    "pages/mobil/mobil",
+    "pages/mysafe/mysafe",
+    "pages/record/record"
   ],
   "permission": {
     "scope.userLocation": {

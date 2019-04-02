@@ -1,0 +1,68 @@
+<!--pages/mysafe/mysafe.wxml-->
+<view class="weui-navbar">
+  <block wx:for="{{tabs}}" wx:key="*this">
+    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick" slider='{{sliderOffset}}'>
+      <view class="weui-navbar__title">{{item}}</view>
+    </view>
+  </block>
+  <view class="weui-navbar__slider" style="left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}rpx); -webkit-transform: translateX({{sliderOffset}}rpx);"></view>
+</view>
+<!-- 下面 -->
+<view class='sss'>
+  <view class="weui-tab__panel">
+    <!-- 当前保险的内容 -->
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+<!-- 没有保险就显示的内容 -->
+        <block wx:if="{{lovec==0}}">
+          <view class='love'>
+            <view class='lo'>您还未有购买保险记录哟!</view>
+          </view>
+          <view class='dog' bindtap='scanCode'>
+            <image src='/images/safedog.png'></image>
+          </view>
+        </block>
+<!-- 有保险就显示的内容 -->
+<view class='list'>
+  <block wx:for="{{list}}"  wx:if="{{lovec>0}}" wx:key="">
+  <view class='insurance' bindtap='maimaimai'  id="{{item.id}}">
+        <view class='left'>
+          <image src='{{item.img_url}}'></image>
+        </view>
+      <view class='right'>
+          <view class='name'>{{item.name}}</view>
+          <view class='lists'>{{item.lists}}</view>
+          <view class='price'>{{item.price}}</view>
+      </view>
+  </view>
+  </block>
+</view>
+    </view>
+    <!-- 历史保险的内容 -->
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <!-- 没有保险就显示的内容 -->
+        <block wx:if="{{lovec==0}}">
+          <view class='love'>
+            <view class='lo'>您还未有购买保险记录哟!</view>
+          </view>
+          <view class='dog' bindtap='scanCode'>
+            <image src='/images/safedog.png'></image>
+          </view>
+        </block>
+<!-- 有保险就显示的内容 -->
+<view class='list'>
+  <block wx:for="{{list}}"  wx:if="{{lovec>0}}" wx:key="">
+  <view class='insurance' bindtap='maimaimai'  id="{{item.id}}">
+        <view class='left'>
+          <image src='{{item.img_url}}'></image>
+        </view>
+      <view class='right'>
+          <view class='name'>{{item.name}}</view>
+          <view class='lists'>{{item.lists}}</view>
+          <view class='price'>{{item.price}}</view>
+      </view>
+  </view>
+  </block>
+</view>
+    </view>
+  </view>
+</view>

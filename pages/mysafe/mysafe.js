@@ -1,35 +1,33 @@
-// pages/serve/serve.js
-import fluxc from '../../datas/call.js'
-import serve from '../../datas/serve.js'
-var sliderWidth = 162;
+// pages/mysafe/mysafe.js
+import list from "../../datas/mysafe.js"
+var sliderWidth = 240;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fluxc: [],
-    tabs: ["维修", "保养", "安检"],
+    tabs: ["当前保险", "历史保险"],
     activeIndex: 0, //初始位
     sliderOffset: 0, //下划线的距离
     sliderLeft: 0, //第一个的距离
-    serve: []
+    lovec: 0, //我的保险的数据长度
+    list:[],
+    id:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-   
-    // console.log(options)
+  onLoad: function (options) {
     this.setData({
-      fluxc,
-      serve
+      list
     })
+
 
     var that = this;
     wx.getSystemInfo({ //获取机器的设备宽度信息
-      success: function(res) {
+      success: function (res) {
         // console.log(res.windowWidth);//375
         // console.log(that.data.tabs.length);//3
         // console.log(sliderWidth);//162  自定义                          // 0
@@ -42,79 +40,61 @@ Page({
       }
     });
   },
-  // 电话报警和流量充值,保险购买的点击事件
-  llclick(e) {
-    console.log(e.currentTarget.dataset.clid)
-    var id = e.currentTarget.dataset.clid
-    if(id==3){
-      wx.navigateTo({
-        url: '/pages/insurance/insurance',
-      })
-    }else if(id==2){
-      wx.navigateTo({
-        url: '/pages/mobil/mobil',
-      })
-    }else if(id==1){
-      wx.navigateTo({
-        url: '/pages/fortify/fortify',
-      })
-    }
-  },
-
-  // 三个服务单按钮  维修保养 安检
-  tabClick: function(e) {
+  // 2个保险单按钮  当前保险  历史保险
+  tabClick: function (e) {
 
     this.setData({
-      sliderOffset: e.currentTarget.id * 250,
+      sliderOffset: e.currentTarget.id * 373,
       activeIndex: e.currentTarget.id
     });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
-
+  onReady: function () {
+    var lovec = this.data.list.length   //爱车的数组
+    console.log(lovec)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

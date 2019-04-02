@@ -1,7 +1,6 @@
 /* pages/login/login.wxss */
 page{
 height:100%;
-
   box-sizing: border-box;
 }
 .lolol{

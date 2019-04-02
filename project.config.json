@@ -38,19 +38,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
 					"name": "常用",
-					"pathName": "pages/buysafe/buysafe",
+					"pathName": "pages/record/record",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 1,
 					"name": "我的",
-					"pathName": "pages/login/login",
+					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
@@ -58,6 +58,13 @@
 					"id": 2,
 					"name": "1",
 					"pathName": "pages/manage/manage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/register/register",
 					"query": "",
 					"scene": null
 				}

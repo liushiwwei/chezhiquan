@@ -45,9 +45,9 @@ page {
 /* 两个白色背景盒子 */
 
 .fluxc .block {
-  width: 350rpx;
-  height: 156rpx;
-  background-color: #fff;
+  width:231rpx;
+  height: 159rpx;
+
   margin-top: 38rpx;
   position: relative;
 }
@@ -55,8 +55,8 @@ page {
 /* 两个标签盒子 */
 
 .fluxc .block .topImg {
-  width: 88rpx;
-  height: 45rpx;
+  width: 56rpx;
+  height: 32rpx;
   /* background-color: red; */
   position: absolute;
   left: 18rpx;
@@ -66,45 +66,46 @@ page {
 .fluxc .block .topImg text {
   position: absolute;
   top: 0;
-  font-size: 22rpx;
-  line-height: 22rpx;
+  font-size: 19rpx;
+  line-height: 19rpx;
   color: #fff;
-  padding-top: 10rpx;
-  padding-left: 22rpx;
+  padding-top: 5rpx;
+  padding-left: 10rpx;
 }
 
 /* 两个大字体 */
 
 .fluxc .block .weight {
-  font-size: 34rpx;
-  line-height: 34rpx;
+  font-size:27rpx;
+  line-height: 27rpx;
   font-weight: bold;
+  color: #fff;
   position: absolute;
-  margin-top: 45rpx;
-  margin-left: 21rpx;
+  margin-top: 40rpx;
+  margin-left:19rpx;
 }
 
 /* 带边框的小字体 */
 
 .fluxc .block .llcz {
-  border: 2rpx solid #666;
+  border: 2rpx solid #fff;
   font-size: 23rpx;
   line-height: 23rpx;
   padding: 5rpx 5rpx;
-  color: #666;
+  color: #fff;
   position: absolute;
-  top: 100rpx;
-  left: 25rpx;
+  top: 90rpx;
+  left: 20rpx;
 }
 
 /* 图标 */
 
 .fluxc .block .rigImg {
-  width: 60rpx;
-  height: 60rpx;
-  position: absolute;
-  bottom: 23rpx;
-  right: 27rpx;
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  /* bottom: 23rpx;
+  right: 27rpx; */
   /* background-color: red; */
 }
 
@@ -112,6 +113,12 @@ page {
 
 .server {
   position: relative;
+}
+
+.server .gd{
+  width: 750rpx;
+  height: 66rpx;
+  background-color: #fff;
 }
 
 .server .gongdan {
@@ -124,6 +131,7 @@ page {
 .server .weui-navbar {
   position: absolute;
   top: 50rpx;
+  background-color: #fff;
 }
 
 .server .weui-navbar .weui-navbar__item {
@@ -239,8 +247,9 @@ page {
 
 .server .store {
   width: 750rpx;
-  height: 210rpx;
+  height: 220rpx;
   background-color: #f6f6f6;
+  margin-top: 20rpx;
 }
 
 .server .store .sleft {

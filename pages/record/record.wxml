@@ -1,0 +1,16 @@
+<!--pages/record/record.wxml-->
+<view class='record'>
+  <!-- 每个盒子 -->
+  <view class='wayRec'>
+    <!-- 每个左边 -->
+    <view class='wayName'>
+      <text class='bigName'>流量充值</text>
+      <text class='ymd'>2019-03-23</text>
+    </view>
+    <!-- 每个右边 -->
+    <view class='pirc'>
+    <text class='left'>¥</text><text class='right'>60</text>
+    <text class='times'>08:35:50</text>
+    </view>
+  </view>
+</view>

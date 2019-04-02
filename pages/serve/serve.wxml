@@ -30,7 +30,9 @@
 </view>
 <!-- 服务工单三个导航键 -->
 <view class='server'>
+  <view class='gd'>
   <text class='gongdan'>服务工单</text>
+  </view>
   <!-- 上面 -->
   <view class="weui-navbar">
     <block wx:for="{{tabs}}" wx:key="*this">

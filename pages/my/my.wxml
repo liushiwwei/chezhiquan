@@ -4,10 +4,11 @@
   <text class='mobil' bindtap='userInfo'>{{userText}}</text>
   <text class='txvip'>{{}}</text>
   <text class='czvip'>续费>></text>
+  <navigator url='' class='record'>充值记录</navigator>
 </view>
 <!-- 保险  设备管理 -->
 <view class="weui-cells weui-cells_after-title" style='margin-top:20rpx;'>
-  <navigator url="/pages/insurance/insurance" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="/pages/mysafe/mysafe" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="../../static/mimg/baoxian.png" style="margin-right: 20rpx;vertical-align: middle;width:45rpx; height: 40rpx;"></image>
     </view>

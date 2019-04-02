@@ -1,0 +1,46 @@
+
+<view class='prix'>
+  <view class='bgImg'>
+    <image src='/images/mobilbg.png'></image>
+  </view>
+  <view class='nowTime'>流量充值:{{times}}</view>
+  <view class='toTime'>到期:{{totimes}}</view>
+  <view class='prixYear'>
+    <text class='txt1'>￥</text>
+    <text class='txt2'>99</text>
+    <text class='txt3'>/</text>
+    <text class='txt4'>年</text>
+  </view>
+</view>
+<!-- 权益 -->
+<view class='equity'>
+  <view class='equityTop'>- 专属权益 -</view>
+  <view class='equityBottom'>
+    <text class='txt1'>开通电话来电报警功能</text>
+  </view>
+</view>
+<!-- 支付方式 -->
+<view class='buyWay'>
+  <view class='wayTop'>- 支付方式 -</view>
+  <view class='wayBottom'>
+    <image src='/images/wxpric.png'></image>
+    <text>微信支付</text>
+    <!-- <image src='{{ifName?/images/select.png:/images/noseclect.png}}' bindtap='wayTap'></image> -->
+    <view class='waiImage' bindtap='wayTap'>
+      <view class="weui-cell__hd weui-check__hd_in-checkbox">
+        <icon class="weui-icon-checkbox_circle" type="circle" id='0' size="23" wx:if="{{!checked}}"></icon>
+        <icon class="weui-icon-checkbox_success" type="success" id='1' size="23" wx:if="{{checked}}"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 支付按钮 -->
+<view class='wxPay' bindtap='czqPay'>
+  <view class='nowPay'>立即充值</view>
+   <view class='ppYear'>
+    <text class='txt1'>￥</text>
+    <text class='txt2'>60</text>
+    <text class='txt3'>/</text>
+    <text class='txt4'>年</text>
+  </view>
+</view>

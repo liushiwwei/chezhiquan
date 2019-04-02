@@ -1,0 +1,205 @@
+/* pages/mobil/mobil.wxss */
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+/* 充值背景图盒子 */
+
+.prix {
+  width: 720rpx;
+  height: 461rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.prix .bgImg {
+  width: 720rpx;
+  height: 461rpx;
+}
+
+.prix .bgImg image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 充值当日日期 */
+
+.prix .nowTime {
+  font-size: 29rpx;
+  line-height: 29rpx;
+  color: #F6F6F6;
+  position: absolute;
+  top: 205rpx;
+  left: 25rpx;
+}
+
+.prix .toTime {
+  font-size: 29rpx;
+  line-height: 29rpx;
+  color: #F6F6F6;
+  position: absolute;
+  top: 205rpx;
+  right: 25rpx;
+}
+/* 黄色价格字体 */
+.prix .prixYear{
+  width: 720rpx;
+  height: 54rpx;
+  text-align: center;
+  position: absolute;
+  top: 280rpx;
+}
+
+.prix .prixYear .txt1{
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #FFE083;
+  margin-right: 20rpx;
+}
+.prix .prixYear .txt2{
+  font-size: 54rpx;
+  line-height: 54rpx;
+  color: #FFE083;
+  margin-right: 15rpx;
+}
+.prix .prixYear .txt3{
+  font-size: 45rpx;
+  line-height: 45rpx;
+  color: #FFE083;
+  margin-right: 10rpx;
+}
+.prix .prixYear .txt4{
+  font-size: 40rpx;
+  line-height: 40rpx;
+  color: #FFE083;
+}
+
+/* 专属权益 */
+.equity{
+  width: 720rpx;
+  height: 168rpx;
+    margin: 0 auto;
+  position: relative;
+  margin-top: 14rpx;
+}
+
+.equity .equityTop{
+  width: 100%;
+  height: 51rpx;
+  background-color: #ff5f5f;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding-top: 12rpx;
+}
+
+.equity .equityBottom{
+  width: 100%;
+  height: 66rpx;
+  background-color: #ee4747;
+    font-size: 23rpx;
+  line-height: 23rpx;
+  color: #BCEAFD;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  padding-top: 39rpx;
+}
+/* 支付方式 */
+.buyWay{
+  width: 720rpx;
+  height: 280rpx;
+  background-color: #fff;
+  position: relative;
+  margin: 15rpx auto 0;
+}
+.buyWay .wayTop{
+  width: 720rpx;
+  height: 40rpx;
+  background-color: #ee4747;
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  padding-top: 15rpx;
+}
+.buyWay .wayBottom{
+  width: 720rpx;
+  height: 225rpx;
+}
+.buyWay .wayBottom image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 140rpx;
+  left: 40rpx;
+}
+.buyWay .wayBottom text{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  position: absolute;
+  left: 150rpx;
+  top: 153rpx;
+}
+
+.buyWay .wayBottom .waiImage{
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  right: 42rpx;
+  top: 137rpx;
+}
+
+/* 充值 */
+.wxPay{
+  width:720rpx;
+  height:55rpx;
+  background-color: #4BC4F7;
+  position: relative;
+  margin: 108rpx auto 0;
+  color: #fff;
+  padding-top:25rpx;
+  border-radius: 10rpx;
+}
+
+.wxPay .nowPay{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  position: absolute;
+  left: 170rpx;
+}
+
+.wxPay .ppYear{
+  height: 31rpx;
+  width: 150rpx;
+  line-height: 31rpx;
+  position: absolute;
+  right: 228rpx;
+}
+
+.wxPay .ppYear .txt1{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-right: 20rpx;
+}
+
+.wxPay .ppYear .txt2{
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-right: 15rpx;
+}
+
+.wxPay .ppYear .txt3{
+  font-size: 25rpx;
+  line-height: 25rpx;
+  margin-right: 10rpx;
+}
+.wxPay .ppYear .txt4{
+  font-size: 20rpx;
+  line-height: 20rpx;
+}
