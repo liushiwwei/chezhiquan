@@ -24,7 +24,8 @@
     "pages/fortify/fortify",
     "pages/mobil/mobil",
     "pages/mysafe/mysafe",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/recordd/recordd"
   ],
   "permission": {
     "scope.userLocation": {

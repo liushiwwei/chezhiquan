@@ -1,4 +1,4 @@
-// pages/record/record.js
+// pages/recordd/record.js
 Page({
 
   /**
@@ -13,12 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-
-  record(){
-    wx.navigateTo({
-      url: '/pages/recordd/recordd',
-    })
   },
 
   /**

@@ -4,7 +4,7 @@
   <text class='mobil' bindtap='userInfo'>{{userText}}</text>
   <text class='txvip'>{{}}</text>
   <text class='czvip'>续费>></text>
-  <navigator url='' class='record'>充值记录</navigator>
+  <navigator url='/pages/record/record' class='record'>充值记录</navigator>
 </view>
 <!-- 保险  设备管理 -->
 <view class="weui-cells weui-cells_after-title" style='margin-top:20rpx;'>

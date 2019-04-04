@@ -21,7 +21,7 @@ Page({
 
   // 选择城市的多项列表
   bindRegionChange: function (e) {
-    console.log(e.detail)
+    // console.log(e)
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       region: e.detail.value
@@ -39,7 +39,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function (e) {
-    console.log(e)
+    
   },
     // 开关防护
     qidong(){
@@ -68,7 +68,7 @@ Page({
 // 历史轨迹
   lsgj(){
     wx.navigateTo({
-      url: '/pages/ssmap/ssmap',
+      url: '/pages/trail/trail',
     })
   },
 

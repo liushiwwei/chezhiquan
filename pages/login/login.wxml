@@ -12,13 +12,13 @@
     </view>
     <view class='password'>
       <image src='/images/PASSicon.png'></image>
-      <input class="logpass" password type="text" placeholder="密码"  placeholder-class='lolol' bindinput='mobilusr'/>
+      <input class="logpass" password type="text" placeholder="密码"  placeholder-class='lolol' bindinput='passusr'/>
     </view>
   </view>
   <!-- 登录按钮 -->
   <view class='loginBtn'>
     <text class='btnTex' bindtap='retrieve'>忘记密码?</text>
-    <button>登录</button>
+    <button bindtap='login'>登录</button>
   </view>
   <!-- 新用户注册 -->
   <view class='register'>

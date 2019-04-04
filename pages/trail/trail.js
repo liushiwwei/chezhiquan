@@ -1,20 +1,143 @@
 // pages/trail/trail.js
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ifName:true, //开关
+    kai:'/images/playbtn.png',
+    guan:'/images/end_bnt.png',
+    scale:18, //地图缩放级别
+    firstHours:0+"0", //播放的开始时间
+    firstMins: 0+"0", //播放的开始时间
+    endHours:10, //播放的结束时间
+    endMins:10, //播放的结束时间
+    longitude:0, //经度
+    latitude:0, //纬度
+    point:[], //每一个定位的数据
+    polyline: [],//路线的数据
+    total:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    this.mapCtx = wx.createMapContext('myMap') //创建一个全局的MapContext实例，并且和组建的<map> 的id绑定
+    // ------------------------------------------------------------------------------------------------
+    var _this = this
+    var point=[]
+    // wx.request({
+    //   url: '',
+    //   data:{},
+    //   header:{},
+    //   success:function(res){
+    //       var long=res.longitude;
+    //       var lati=res.latitude;
+    //       point.push({longitude:long,latitude:lati})
+    //   }
+    // })
+ 
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        _this.setData({
+          longitude: res.longitude,
+          latitude: res.latitude,
+        });
+      }
+    });
   },
+  bindDateChange(e){  //选择日期的事件
+    console.log(e)
+  },
+start(){//播放
+  var _this = this
+  var ifon = _this.data.ifName
+  console.log(ifon);
+  ifon = !ifon
+  _this.setData({
+    ifName:ifon
+  })
 
+ 
+  var times = setTimeOut(function () {
+    var firstHours = _this.data.firstHours;
+    var firstMins = _this.data.firstMins;
+    console.log(firstMins)
+    var endHours = _this.data.endHours;
+    var endMins = _this.data.endMins;
+    firstMins++
+
+
+ //如果等于就清除定时器
+    var endHours = _this.data.endHours
+    var endMins = _this.data.endMins
+    if (firstHours == endHours && firstMins == endMins){
+      clearInterval(times)
+    }
+    // console.log(firstMins)
+    // console.log(_this)
+    if (firstHours < 10 &&firstMins >= 60 ) {
+      console.log(444)
+       firstMins = 0;
+      firstHours++
+      firstMins= "0" + firstMins
+      firstHours = "0" + firstHours
+      _this.setData({
+        firstMins,
+        firstHours
+      })
+    }
+ 
+
+    
+  }, 100)
+  // if (!ifon) {
+  //   clearInterval(times)
+  // }
+     
+
+  // this.timer = setInterval(repeat, 1000); //周期循环
+  // function repeat() {
+  //   console.log(111);
+   
+  //   console.log(_this.data)
+  //   var point = _this.data.point
+  //   var lat =0
+  //   var lng =0
+  //   wx.getLocation({
+  //     type: 'gcj02',
+  //     success: function (res) {
+  //       lat = res.latitude;
+  //       lng = res.longitude;
+  //       point.push({ latitude: lat, longitude: lng });
+  //       console.log(point);
+  //     }
+  //   });
+  //   console.log(222);
+  //   _this.setData({
+  //     polyline:[{
+  //       points: point,
+  //       color: '#4bc4f7',
+  //       width: 4,
+  //       dottedLine: false
+  //     }]
+  //   })
+  // }
+},
+add(){ //快进
+  console.log('结束');
+  clearInterval(this.timer);
+},
+  pdd(){  //后退
+    console.log('结束');
+    clearInterval(this.timer);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

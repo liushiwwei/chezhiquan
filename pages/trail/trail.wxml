@@ -1,2 +1,29 @@
 <!--pages/trail/trail.wxml-->
-<text>pages/trail/trail.wxml</text>
+<map id='myMap' polyline='{{polyline}}' latitude='{{latitude}}' longitude='{{longitude}}' show-location />
+
+  <view class='editPass'>
+  <!-- 播放器背景 -->
+    <view class='bgblock'>
+      <!-- 选择时间列表 -->
+        <picker mode="date"
+                value="{{date}}"
+                start="2018-09-01"
+                end="2019-05-01"
+                bindchange="bindDateChange">
+            <image class='trailList' src='/images/timelist.png '/>
+        </picker>
+      <!-- 播放进度 -->
+        <view class='firstTime'>{{firstHours}}:{{firstMins}}</view>
+          <!-- 播放进度条 -->
+              <view class='_jindu '>
+                <view style='width:{{total}}' class='jindu2'></view>
+              </view>
+        <view class='endTime'>{{endHours}}:{{endMins}}</view>
+      <!-- 播放器快退 -->
+      <image src='/images/munsbt.png' class='munsbt' bindtap='pdd'></image>
+      <!-- 播放器播放 -->
+      <image src='{{ifName?kai:guan}}' class='playbtn' bindtap='start'></image>
+      <!-- 播放器快进 -->
+      <image src='/images/addplay.png' class='addplay' bindtap='add'></image>
+    </view>
+  </view>

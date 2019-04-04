@@ -32,7 +32,20 @@ const fordatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 
+ const b64EncodeUnicode =str=> {
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
+    return String.fromCharCode('0x' + p1);
+  }));
+}
+//
+
 module.exports = {
   formatTime: formatTime,
-  fordatTime: fordatTime
+  fordatTime: fordatTime,
+  b64EncodeUnicode: b64EncodeUnicode
 }
+
+
+
+

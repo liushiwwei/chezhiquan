@@ -1,1 +1,98 @@
 /* pages/trail/trail.wxss */
+page {
+  height: 100%;
+}
+#myMap {
+  width: 100%;
+  min-height: 84%;
+  position: relative;
+}
+
+ .editPass {
+  width: 720rpx;
+  height: 163rpx;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 10rpx;
+  margin-left: 16rpx;
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+ .bgblock{
+  width: 660rpx;
+  height: 121rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 23rpx auto;
+  position: relative;
+}
+
+/* 进度条 */
+.editPass .bgblock ._jindu{
+  width: 213rpx;
+  height: 4rpx;
+  background-color: #f0f0f0;
+   position: absolute;
+   left: 148rpx;
+   top: 59rpx;
+}
+.jindu2{
+  max-width: 213rpx;
+  min-width: 0;
+  height: 4rpx;
+  background-color: #4BC4F7;
+  position: absolute;
+}
+
+/* 选择列表图标 */
+.editPass .bgblock .trailList{
+  width: 40rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 47rpx;
+  left: 26rpx;
+}
+/* 选择时间 */
+.editPass .bgblock .firstTime{
+ font-size: 18rpx;
+ line-height: 18rpx;
+ color: #666;
+ position: absolute;
+ top: 53rpx;
+ left: 92rpx;
+}
+.editPass .bgblock .endTime{
+ font-size: 18rpx;
+ line-height: 18rpx;
+ color: #666;
+ position: absolute;
+ top: 53rpx;
+ left: 369rpx;
+}
+/* 播放 */
+.editPass .bgblock .munsbt{
+  width: 37rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 43rpx;
+  right: 181rpx;
+}
+.editPass .bgblock .playbtn{
+  width: 97rpx;
+  height: 97rpx;
+  position: absolute;
+  top: 12rpx;
+  right: 67rpx;
+}
+
+.editPass .bgblock .addplay{
+  width: 37rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 43rpx;
+  right: 13rpx;
+}
+
+
+

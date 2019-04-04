@@ -1,0 +1,135 @@
+/* pages/recordd/record.wxss */
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.block{
+  width: 750rpx;
+  height: 15rpx;
+  background-color: #f6f6f6;
+}
+
+.recordd{
+  width: 686rpx;
+  height: 100%;
+  background-color: #fff;
+  padding: 27rpx 37rpx;
+}
+
+/* 流水号 */
+.recordd .stream{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 27rpx;
+}
+
+.recordd .stream .name{
+  flex: 6;
+  text-align: left;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+
+.recordd .stream .num{
+  flex: 6;
+  text-align: right;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+/* 类型 */
+.recordd .reType{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 27rpx;
+}
+
+.recordd .reType .tyname{
+  flex: 6;
+  text-align: left;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+
+.recordd .reType .tynum{
+  flex: 6;
+  text-align: right;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+/* 支付方式 */
+.recordd .mode{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 27rpx;
+}
+
+.recordd .mode .moname{
+  flex: 6;
+  text-align: left;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+
+.recordd .mode .monum{
+  flex: 6;
+  text-align: right;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+/* 时间 */
+.recordd .reTime{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 27rpx;
+}
+
+.recordd .reTime .tiname{
+  flex: 6;
+  text-align: left;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+
+.recordd .reTime .tinum{
+  flex: 6;
+  text-align: right;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+/* 金额 */
+.recordd .reNumb{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 27rpx;
+}
+
+.recordd .reNumb .nuname{
+  flex: 6;
+  text-align: left;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}
+
+.recordd .reNumb .nunum{
+  flex: 6;
+  text-align: right;
+  font-size: 27rpx;
+  line-height: 27rpx;
+  color: #666;
+}

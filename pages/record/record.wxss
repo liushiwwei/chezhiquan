@@ -4,3 +4,70 @@ page {
   min-height: 100%;
   background-color: #f6f6f6;
 }
+
+.record{
+  margin-top: 8rpx;
+  width: 750rpx;
+  min-height: 100%;
+}
+.wayRec{
+  width: 680rpx;
+  height: 70rpx;
+  background-color: #fff;
+  display: flex;
+  padding: 25rpx 35rpx;
+}
+
+.wayRec .wayName{
+  flex: 6;
+  text-align: left;
+  position: relative;
+  margin-bottom: 5rpx;
+}
+
+.wayRec .wayName .bigName{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  position: absolute;
+  top: 0;
+}
+.wayRec .wayName .ymd{
+  font-size: 19rpx;
+  line-height: 19rpx;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+}
+
+.wayRec .pirc{
+  flex: 6;
+  text-align: right;
+  position: relative;
+}
+
+.wayRec .pirc .left{
+  font-size: 18rpx;
+  line-height: 18rpx;
+  color: #000;
+  position: absolute;
+  top: 10rpx;
+  right: 44rpx;
+}
+.wayRec .pirc .right{
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #EE4747;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wayRec .pirc .times{
+   font-size: 19rpx;
+  line-height: 19rpx;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+

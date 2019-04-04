@@ -1,0 +1,29 @@
+<!--pages/recordd/recordd.wxml-->
+<view class='block'></view>
+<view class='recordd'>
+  <!-- 流水号 -->
+  <view class='stream'>
+    <text class='name'>流水号:</text>
+    <text class='num'>6546764515647654326859713</text>
+  </view>
+  <!-- 类型 -->
+  <view class='reType'>
+    <text class='tyname'>类型:</text>
+    <text class='tynum'>流量充值</text>
+  </view>
+  <!-- 支付方式 -->
+  <view class='mode'>
+    <text class='moname'>支付方式:</text>
+    <text class='monum'>微信支付</text>
+  </view>
+  <!-- 时间 -->
+  <view class='reTime'>
+    <text class='tiname'>时间:</text>
+    <text class='tinum'>2019-03-25  08:35:43</text>
+  </view>
+  <!-- 金额 -->
+  <view class='reNumb'>
+    <text class='nuname'>金额:</text>
+    <text class='nunum'>998元</text>
+  </view>
+</view>
