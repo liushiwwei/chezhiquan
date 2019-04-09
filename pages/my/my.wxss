@@ -25,6 +25,14 @@ page {
   top: 90rpx;
   margin-left: 40rpx;
 }
+.top .logg {
+  font-size: 40rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  position: absolute;
+  top: 90rpx;
+  margin-left: 40rpx;
+}
 .top .czvip{
   font-size: 24rpx;
   line-height: 24rpx;

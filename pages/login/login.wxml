@@ -1,5 +1,5 @@
 <!--pages/login/login.wxml-->
-<view class='bigbg' style='background-color:#032754;background-size:100% 100%;'>
+<view class='bigbg' style='background-color:#5f89ff;background-size:100% 100%;'>
   <!-- logo -->
   <view class='logo'>
     <image style='width:100%;height:100%;' src="/images/injoylogo.png"></image>
@@ -8,11 +8,11 @@
   <view class='loging'>
     <view class='user'>
       <image src='/images/USERicon.png'></image>
-      <input class="umobil" auto-focus placeholder="手机号码" placeholder-class='lolol' maxlength="11" bindinput='mobilusr'></input>
+      <input class="umobil" auto-focus placeholder="手机号码" placeholder-class='lolol'  placeholder-style="color:#fff" maxlength="11" bindinput='mobilusr'></input>
     </view>
     <view class='password'>
       <image src='/images/PASSicon.png'></image>
-      <input class="logpass" password type="text" placeholder="密码"  placeholder-class='lolol' bindinput='passusr'/>
+      <input class="logpass" password type="text" placeholder="密码"  placeholder-style="color:#fff"  placeholder-class='lolol' bindinput='passusr'/>
     </view>
   </view>
   <!-- 登录按钮 -->

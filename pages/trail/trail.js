@@ -11,7 +11,7 @@ Page({
     kai:'/images/playbtn.png',
     guan:'/images/end_bnt.png',
     scale:18, //地图缩放级别
-    firstHours:0+"0", //播放的开始时间
+    firstHours:"0"+0, //播放的开始时间
     firstMins: 0+"0", //播放的开始时间
     endHours:10, //播放的结束时间
     endMins:10, //播放的结束时间
@@ -65,9 +65,9 @@ start(){//播放
   })
 
  
-  var times = setTimeOut(function () {
+  var times = setInterval(function () {
     var firstHours = _this.data.firstHours;
-    var firstMins = _this.data.firstMins;
+    var firstMins =  _this.data.firstMins;
     console.log(firstMins)
     var endHours = _this.data.endHours;
     var endMins = _this.data.endMins;
@@ -77,25 +77,53 @@ start(){//播放
  //如果等于就清除定时器
     var endHours = _this.data.endHours
     var endMins = _this.data.endMins
-    if (firstHours == endHours && firstMins == endMins){
-      clearInterval(times)
-    }
+    // if (firstHours == endHours && firstMins == endMins){
+    //   clearInterval(times)
+    // }
     // console.log(firstMins)
     // console.log(_this)
-    if (firstHours < 10 &&firstMins >= 60 ) {
-      console.log(444)
+    if (firstHours <= 9 &&firstMins >= 60 ) {
+      console.log(4444)
        firstMins = 0;
       firstHours++
-      firstMins= "0" + firstMins
-      firstHours = "0" + firstHours
       _this.setData({
         firstMins,
+        firstHours: "0" + firstHours
+      })
+    }else if(firstHours<10 &&firstMins<10){
+      console.log(333)
+      _this.setData({
+        firstMins: "0" + firstMins,
         firstHours
+      })
+    }else if(firstHours<10 &&firstMins>=10){
+      console.log(22)
+      _this.setData({
+        firstMins: firstMins,
+        firstHours
+      })
+    } else if (firstHours >= 10 && firstMins >= 60 ){
+      console.log(22)
+      firstMins = 0;
+      firstHours++
+      _this.setData({
+        firstMins,
+        firstHours: Math.round(firstHours)
+      })
+    } else if (firstHours >= 10 && firstMins < 10){
+      console.log(1)
+      _this.setData({
+        firstMins: "0" + firstMins,
+        firstHours: Math.round(firstHours)
+      })
+    } else if (firstHours >= 10 && firstMins >= 10) {
+      console.log(1)
+      _this.setData({
+        firstMins: firstMins,
+        firstHours: Math.round(firstHours)
       })
     }
  
-
-    
   }, 100)
   // if (!ifon) {
   //   clearInterval(times)

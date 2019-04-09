@@ -54,7 +54,7 @@ Page({
         }
       }, 1000) 
       wx.request({
-        url: 'http://192.168.0.02:8088/api/system/send-sms',
+        url: 'http://192.168.0.106:8088/api/system/send-sms',
         method: "post",
         header: {
           "Authorization": "Basic YXBwOmFwcDEwMTI=",
@@ -107,7 +107,7 @@ Page({
       })
       // 发送请求
       wx.request({
-        url: 'http://192.168.0.02:8088/api/user/register',
+        url: 'http://192.168.0.106:8088/api/user/register',
         method: 'post',
         header: {
           "Authorization": "Basic YXBwOmFwcDEwMTI=",

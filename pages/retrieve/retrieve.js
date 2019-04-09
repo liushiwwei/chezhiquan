@@ -12,7 +12,7 @@ Page({
   goGetCode() {
     var _that = this;
     var time = 60;
-    console.log(_that.setData)
+    // console.log(_that.setData)
     _that.setData({
       code: '60秒后重发',
       disabled: true,

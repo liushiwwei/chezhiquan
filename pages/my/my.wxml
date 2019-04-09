@@ -1,7 +1,8 @@
 <!--pages/my/my.wxml-->
 <view class='top'>
   <image src='../../static/mimg/head.png'></image>
-  <text class='mobil' bindtap='userInfo'>{{userText}}</text>
+  <text class='mobil' wx:if="{{ifno}}">{{usertel}}</text>
+  <text class='logg' wx:if="{{!ifno}}" bindtap='userInfo'>登录</text>
   <text class='txvip'>{{}}</text>
   <text class='czvip'>续费>></text>
   <navigator url='/pages/record/record' class='record'>充值记录</navigator>

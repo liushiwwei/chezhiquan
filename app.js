@@ -5,14 +5,37 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    console.log("检查登录")
+    const tel = wx.getStorageSync("account")
+    // console.log(!tel)
+    if(!tel){
+      console.log("未登录")
+      wx.reLaunch({
+        url: '/pages/login/login',
+      })
+    }else{
+      console.log("已登录")
+    }
+
+
+
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    
+    console.log("检查登录")
+    const tel = wx.getStorageSync("account")
+    // console.log(!tel)
+    if (!tel) {
+      console.log("未登录")
+      wx.reLaunch({
+        url: '/pages/login/login',
+      })
+    } else {
+      console.log("已登录")
+    }
   },
 
   /**

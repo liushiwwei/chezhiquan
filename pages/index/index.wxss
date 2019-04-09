@@ -96,7 +96,8 @@ swiper image {
 .cut .cut_car image {
   width: 36rpx;
   height: 28rpx;
-  margin-left: 33rpx;
+  margin-left: 24rpx;
+  margin-top: 5rpx
 }
 
 /* 电池信息 */

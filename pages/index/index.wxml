@@ -18,8 +18,8 @@
     </picker>
   </view>
   <!-- 通知模块 -->
-  <navigator  class='notice' url='/pages/tips/tips'>
-  <image class='yuan1' src='/static/img/yuan1.png'>
+  <navigator class='notice' url='/pages/tips/tips'>
+    <image class='yuan1' src='/static/img/yuan1.png'>
       <!-- <image src='/static/img/notice2.png'/> -->
     </image>
     <image class='notice2' src='/static/img/notice2.png' />
@@ -27,8 +27,10 @@
   <!-- 选择车辆功能区域 -->
   <view class='cut'>
     <view class='cut_car'>
-      <text>{{name}}</text>
-      <image src='/static/img/qiehuanico.png' bindtap='cutlove'></image>
+      <picker bindchange="bindPickerChangeName" value="{{idx}}" range="{{results}}">
+        <text>{{stata}}</text>
+      </picker>
+      <image src='/static/img/qiehuanico.png' bindtap='carLove'></image>
     </view>
   </view>
   <!-- 车辆的电量,里程信息 -->
@@ -62,8 +64,8 @@
   <!-- 开关防护功能 -->
   <view class='guard'>
     <view class='block'>
-      <block wx:for="{{notice}}" wx:key="{{item.id}}"  wx:if="{{notice.length>0}}" >
-        <view class='qidong' bindtap='qidong' >
+      <block wx:for="{{notice}}" wx:key="{{item.id}}" wx:if="{{notice.length>0}}">
+        <view class='qidong' bindtap='qidong'>
           <image src='{{qidongon?item.img_url3:item.img_url1}}'></image>
         </view>
         <view class='fanghu' bindtap='fanghu'>

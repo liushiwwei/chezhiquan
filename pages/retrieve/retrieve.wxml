@@ -1,5 +1,5 @@
 <!--pages/retrieve/retrieve.wxml-->
-<view class='bigbg' style='background-color:#032754;background-size:100% 100%;'>
+<view class='bigbg' style='background-color:#5f89ff;background-size:100% 100%;'>
   <form class='ffrom' bindsubmit='formSubmit'>
     <!-- 账号密码框 -->
     <view class='loging'>

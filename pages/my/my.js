@@ -5,11 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userText: "注册/登录"
+    usertel: "",
+    ifno:""
   },
   userInfo() {
     wx.navigateTo({
-      url: '/pages/register/register',
+      url: '/pages/login/login',
     })
   },
   editMima(){
@@ -24,6 +25,7 @@ Page({
     wx.setBackgroundColor({
       backgroundColor: '#666', // 窗口的背景色为白色
     })
+
   },
 
   /**
@@ -37,7 +39,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    const account = wx.getStorageSync("account")
+    const token = wx.getStorageSync("token")
+    const accId = wx.getStorageSync("accId")
+    var ifno = this.data.ifno
+    if (account) {
+      ifno = true
+    } else {
+      ifno = false
+    }
 
+    this.setData({
+      usertel: account,
+      ifno
+    })
+    wx.login()
   },
 
   /**

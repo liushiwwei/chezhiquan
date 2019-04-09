@@ -33,6 +33,23 @@ page {
   height: 100%;
 }
 
+/* 添加按钮 */
+
+.addBtn {
+  background-color: #6ea1fe;
+  width: 175rpx;
+  height: 50rpx;
+  /* box-shadow: 0 0 10rpx #333 ; */
+  position: absolute;
+  top: 680rpx;
+  left: 297rpx;
+  color: #fff;
+  font-size: 16rpx;
+  line-height: 16rpx;
+  border-radius: 8rpx;
+  padding-top: 18rpx;
+}
+
 /* 显示有设备的样式 */
 
 .manage {
@@ -59,6 +76,8 @@ page {
   color: #333;
   position: absolute;
   top: 25rpx;
+  width: 100%;
+  text-align: left;
 }
 
 .manage .left .text2 {
@@ -142,14 +161,14 @@ movable-view {
 
 .toast-box {
   width: 750rpx;
-  height:100%;
+  height: 100%;
   position: fixed;
-  margin: -200rpx  auto;
+  margin: -200rpx auto;
   z-index: 88;
   opacity: 0.9;
   text-align: center;
-  justify-content:center;
-  display:flex;
+  justify-content: center;
+  display: flex;
   top: 0;
 }
 
@@ -180,7 +199,7 @@ movable-view {
   background-color: #fff;
   text-align: center;
   padding-top: 40rpx;
-  border-top-left-radius:15rpx; 
+  border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
 }
 
@@ -196,7 +215,7 @@ movable-view {
 .toast-input {
   margin-left: 5%;
   margin-right: 5%;
-  border-bottom: 1rpx solid #F6F6F6;
+  border-bottom: 1rpx solid #f6f6f6;
 }
 
 .toast-button {
@@ -226,3 +245,39 @@ movable-view {
   border-left: 1rpx solid #f6f6f6;
 }
 
+/* 添加框 */
+
+.codeList {
+  width: 500rpx;
+  height: 300rpx;
+  background-color: #fff;
+  position: absolute;
+  left: 128rpx;
+  top: 440rpx;
+  border-radius: 10rpx;
+}
+
+/* 确认添加按钮 */
+
+.codeList .btn {
+  background-color: #6ea1fe;
+  width: 175rpx;
+  height: 40rpx;
+  /* box-shadow: 0 0 10rpx #333 ; */
+  position: absolute;
+  top: 220rpx;
+  left: 169rpx;
+  color: #fff;
+  font-size: 16rpx;
+  line-height: 16rpx;
+  border-radius: 8rpx;
+  padding-top: 14rpx;
+}
+
+.codeList .user {
+  position: absolute;
+  width: 480rpx;
+  top: 80rpx;
+  left: 12rpx;
+  border-bottom: 2rpx solid #333;
+}

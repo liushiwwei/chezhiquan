@@ -1,27 +1,27 @@
 <!--pages/register/register.wxml-->
-<view class='bigbg' style='background-color:#032754;background-size:100% 100%;'>
+<view class='bigbg' style='background-color:#5f89ff;background-size:100% 100%;'>
   <form class='ffrom' bindsubmit='formSubmit'>
     <!-- 账号密码框 -->
     <view class='loging'>
       <!-- 手机号 -->
       <view class='user'>
         <image src='/images/USERicon.png'></image>
-        <input class="umobil" auto-focus placeholder="手机号码" bindinput='tel' name="mobil" placeholder-class='lolol' maxlength="11" />
+        <input class="umobil" auto-focus placeholder="手机号码" bindinput='tel' name="mobil" placeholder-style="color:#fff"  placeholder-class='lolol' maxlength="11" />
       </view>
       <!-- 密码 -->
       <view class='password'>
         <image src='/images/PASSicon.png'></image>
-        <input class="logpass" password type="text" name="passWord" placeholder="密码" placeholder-class='lolol' />
+        <input class="logpass" password type="text" name="passWord" placeholder="密码" placeholder-style="color:#fff"  placeholder-class='lolol' />
       </view>
       <!-- 确认密码 -->
       <view class='password'>
         <image src='/images/PASSicon.png'></image>
-        <input class="logpass" password type="text" name="passWord2" placeholder="确认密码" placeholder-class='lolol' />
+        <input class="logpass" password type="text" name="passWord2" placeholder="确认密码" placeholder-style="color:#fff"  placeholder-class='lolol' />
       </view>
       <!-- 验证码 -->
       <view class='userCode'>
         <image src='/images/codeicon.png'></image>
-        <input class="logcode"type="text" name="userCode" placeholder="验证码" maxlength="10" placeholder-class='lolol' />
+        <input class="logcode"type="text" name="userCode" placeholder="验证码" placeholder-style="color:#fff"  maxlength="10" placeholder-class='lolol' />
         <button disabled='{{disabled}}' bindtap="goGetCode">{{codee}}</button>
       </view>
     </view>

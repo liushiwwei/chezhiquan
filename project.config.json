@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -50,21 +50,21 @@
 				{
 					"id": 1,
 					"name": "我的",
-					"pathName": "pages/login/login",
+					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 2,
 					"name": "1",
-					"pathName": "pages/trail/trail",
+					"pathName": "pages/install/install",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 3,
 					"name": "test",
-					"pathName": "pages/login/login",
+					"pathName": "pages/manage/manage",
 					"query": "",
 					"scene": null
 				}

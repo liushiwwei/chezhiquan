@@ -46,7 +46,7 @@ height:100%;
   text-align: left;
   margin-right: 22rpx;
   margin-top: 5rpx;
-  color: #cccccc;
+  color: #fff;
   font-size: 18px;
 }
 /* 密码部分 */
@@ -72,10 +72,11 @@ height:100%;
   text-align: left;
   margin-right: 23rpx;
   margin-top: 5rpx;
-  color: #cccccc;
+  color: #fff;
   font-size: 18px;
   line-height: 18rpx;
 }
+
 
 /* 登录按钮部分 */
 .bigbg .loginBtn{
@@ -84,6 +85,9 @@ height:100%;
   position: absolute;
   top: 50%;
   margin-top: 250rpx;
+}
+.bigbg .loginBtn button{
+  color: #5f89ff;
 }
 .bigbg .loginBtn .btnTex{
   font-size:24rpx;

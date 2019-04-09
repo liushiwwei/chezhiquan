@@ -5,18 +5,18 @@
     <view class='lo'>还未绑定爱车</view>
     <view class='ve'>赶紧扫描绑定爱车吧!</view>
   </view>
-  <view class='dog' bindtap='scanCode'>
+  <view class='dog' bindtap='scanList'>
     <image src='/images/illustration.png'></image>
   </view>
 </block>
 
-<block wx:if="{{lovec>0}}" wx:for="{{manage}}" wx:key="{{item.id}}">
+<block wx:if="{{lovec>0}}" wx:for="{{result}}" wx:key="{{item.id}}">
   <movable-area>
     <movable-view direction="horizontal" damping="200" bindchange="handMoveChange" out-of-bounds="true" x="{{x}}" animation="false" capture-bind:touchend="leftTapend" capture-bind:touchstart="leftTapstart" data-idx="{{index}}">
       <view class='manage' data-id='{{item.id}}'>
         <view class='left'>
-          <text class='text1'>{{item.text1}}</text>
-          <text class='text2'>{{item.text2}}</text>
+          <text class='text1' wx:if="{{item.devName!=null}}">{{item.devName}}</text>
+          <text class='text2'>{{item.devId}}</text>
         </view>
       </view>
       <view class='delet_btn' data-index='{{index}}' bindtap='delect_tap' hidden=''>
@@ -27,8 +27,11 @@
       </view>
     </movable-view>
   </movable-area>
-
 </block>
+
+<view  wx:if="{{lovec>0}}">
+  <button class='addBtn' bindtap='scanList'>添加设备</button>
+</view>
 <!-- 删除提示弹框 -->
 <!-- <view class='boss1'>
   <view class='toast-box' hidden='{{!fName}}'>
@@ -54,26 +57,36 @@
 </view> -->
 <!-- 修改弹框 -->
 <!-- <view class='boss'> -->
-  <view class='toast-box' hidden='{{!ifName}}'>
-    <view class='toastbg'></view>
-    <view class='showToast'>
-      <view class='toast-title'>
-        <text>修改爱车名</text>
-      </view>
-      <view class='toast-main'>
-        <view class='toast-input'>
-          <input placeholder='请输入姓名' bindinput='binput' data-name='stuEidtName'></input>
-        </view>
-      </view>
-      <view class='toast-button'>
-        <view class='button1' bindtap='cancel'>
-          取消
-        </view>
-        <view class='button2' bindtap='confirm'>
-          确定
-        </view>
-
+<view class='toast-box' hidden='{{!ifName}}'>
+  <view class='toastbg'></view>
+  <view class='showToast'>
+    <view class='toast-title'>
+      <text>修改爱车名</text>
+    </view>
+    <view class='toast-main'>
+      <view class='toast-input'>
+        <input placeholder='请输入姓名' bindinput='binput' data-name='stuEidtName'></input>
       </view>
     </view>
+    <view class='toast-button'>
+      <view class='button1' bindtap='cancel'>
+        取消
+      </view>
+      <view class='button2' bindtap='confirm'>
+        确定
+      </view>
+
+    </view>
   </view>
+</view>
 <!-- </view> -->
+
+<!-- 添加设备框 -->
+<view class='codeList' wx:if="{{ifadd}}">
+  <!-- 手机号 -->
+  <view class='user'>
+    <input class="umobil" auto-focus placeholder="请输入IMEI码" bindinput='imei' name="devImei" placeholder-style="color:#999" placeholder-class='lolol' maxlength="15" />
+  </view>
+  <!-- 注册按钮-->
+  <button bindtap='okAdd' class='btn'>确认添加</button>
+</view>

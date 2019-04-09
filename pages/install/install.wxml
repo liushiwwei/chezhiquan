@@ -1,6 +1,6 @@
 <!--pages/install/install.wxml-->
 <view class='install'>
-  <view class='stroge'>清除缓存</view>
+  <view class='stroge' bindtap='clearStor'>清除缓存</view>
   <view class='times'>
     <picker bindchange="bindPickerChangeTime" value="{{index}}" range="{{times}}">
       <text class='left'>报警时长设置</text>
