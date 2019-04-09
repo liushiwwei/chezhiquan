@@ -1,4 +1,5 @@
 // pages/my/my.js
+
 Page({
 
   /**
@@ -39,6 +40,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    if (typeof this.getTabBar === "function"  &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 2
+      })
+    }
     const account = wx.getStorageSync("account")
     const token = wx.getStorageSync("token")
     const accId = wx.getStorageSync("accId")
@@ -91,3 +98,4 @@ Page({
 
   }
 })
+

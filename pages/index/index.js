@@ -49,6 +49,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function(e) {
+    if (typeof this.getTabBar === "function" &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
     var token = wx.getStorageSync("token") //令牌
     var accId = wx.getStorageSync("accId") //用户id
     var stata = wx.getStorageSync("stata") //用户初始的设备

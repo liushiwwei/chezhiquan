@@ -40,6 +40,7 @@
     "backgroundColor": "#fbfbfb"
   },
   "tabBar": {
+    "custom": true,
     "color": "#333333",
     "backgroundColor": "#fbfbfb",
     "selectedColor": "#4bc4f7",
@@ -47,21 +48,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/sindex.png"
+        "text": "首页"
       },
       {
         "pagePath": "pages/serve/serve",
-        "text": "服务",
-        "iconPath": "static/img/serve.png",
-        "selectedIconPath": "static/img/sserve.png"
+        "text": "服务"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "static/img/mmy.png",
-        "selectedIconPath": "static/img/smmy.png"
+        "text": "我的"
       }
     ]
   },
