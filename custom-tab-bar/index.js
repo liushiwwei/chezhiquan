@@ -28,10 +28,13 @@ Component({
   },
   methods: {
     switchTab(e) {
+      var _this=this
       const data = e.currentTarget.dataset
       const url = data.path
-      wx.switchTab({url})
-      this.setData({
+      wx.switchTab({
+        url
+        })
+      _this.setData({
         selected: data.index
       })
     }

@@ -1,3 +1,5 @@
+
+e80abff3c1180aa38222b53d1b0220b1
 [[我的]]
 index  首页				static  是自建js数据
 
@@ -31,7 +33,7 @@ my   我的
 		record   充值记录 ==>recordd 记录详情
 保险订单页面  
 
-
+.replace(/[^0-9]/ig, "")    正则
 
   wx.request({
         url: 'http://192.168.0.106:8088/api/system/send-sms',

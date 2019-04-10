@@ -66,3 +66,26 @@ page {
   position: absolute;
   right: 20rpx;
 }
+
+/* 电话报警 */
+.install .bjCall{
+  width: 712rpx;
+  height: 32rpx;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+  line-height: 32rpx;
+  padding: 44rpx 0;
+  padding-left: 38rpx;
+  position: relative;
+}
+
+.install .bjCall .left{
+  font-size: 33rpx;
+  line-height: 33rpx;
+  position: absolute;
+}
+.install .bjCall switch{
+  top: 32rpx;
+  right: 38rpx;
+  position: absolute;
+}

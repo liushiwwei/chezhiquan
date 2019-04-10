@@ -13,7 +13,7 @@
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.2",
+	"libVersion": "2.5.2",
 	"appid": "wx515b9ef0181c0fa2",
 	"projectname": "wx_cardog",
 	"debugOptions": {
@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
@@ -64,7 +64,7 @@
 				{
 					"id": 3,
 					"name": "test",
-					"pathName": "pages/manage/manage",
+					"pathName": "pages/trail/trail",
 					"query": "",
 					"scene": null
 				}

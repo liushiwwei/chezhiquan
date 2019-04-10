@@ -25,21 +25,22 @@
     <image class='notice2' src='/static/img/notice2.png' />
   </navigator>
   <!-- 选择车辆功能区域 -->
-  <view class='cut'>
-    <view class='cut_car'>
-      <picker bindchange="bindPickerChangeName" value="{{idx}}" range="{{results}}">
+  <!-- <view class='cut'>
+    <view class='cut_car'> -->
+      <picker class='cut' bindchange="bindPickerChangeName" value="{{idx}}" range="{{results}}">
         <text>{{stata}}</text>
+         <image  class='cut_car' src='/static/img/qiehuanico.png'></image>
       </picker>
-      <image src='/static/img/qiehuanico.png' bindtap='carLove'></image>
-    </view>
-  </view>
+    <!-- </view>
+  </view> -->
   <!-- 车辆的电量,里程信息 -->
   <view class='car_xinxi'>
     <!-- 电池信息 -->
     <view class='dianchi'>
-      <image src='/static/img/dianchi.png' class='dian_chi'></image>
+      
+      <image src='/static/img/dianchi.png' class='dian_chi'><view class='electric' style='height:{{electric}}%'></view></image>
       <view class='fute'>
-        <text>{{fute}}</text>
+        <text>{{carVoltage}}</text>
         <text class='v'>v</text>
       </view>
       <text class='dianv'>电池电量(v)</text>

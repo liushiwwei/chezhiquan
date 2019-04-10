@@ -87,6 +87,16 @@ Page({
         selected: 1
       })
     }
+
+    var token = wx.getStorageSync("token") //令牌
+    if (!token) { //验证登录
+      console.log("未登录")
+      wx.reLaunch({
+        url: '/pages/login/login',
+      })
+    } else {
+      console.log("已登录")
+    }   //验证登录
   },
 
   /**

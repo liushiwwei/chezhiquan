@@ -13,4 +13,8 @@
       <text class='right'>{{stata}}</text>
     </picker>
   </view>
+  <view class='bjCall'>
+    <text class='left'>电话设置</text>
+    <switch bindchange="switchChangeCall" checked='{{edit}}' color="#4bc4f7" />
+  </view>
 </view>

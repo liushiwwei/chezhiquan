@@ -127,6 +127,8 @@ page {
   font-size: 26rpx;
   line-height: 26rpx;
   padding-top: 15rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
 }
 .buyWay .wayBottom{
   width: 720rpx;

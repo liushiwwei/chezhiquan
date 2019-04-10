@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    
+
   },
   retrieve() { //跳转到修改密码
     wx.navigateTo({
@@ -39,7 +39,7 @@ Page({
     var _this = this;
     wx.login({
       success: function(res) {
-        var code =res.code
+        var code = res.code
         // console.log(_this.data)
         var tel = _this.data.tel;
         var pass = _this.data.pass;
@@ -59,18 +59,17 @@ Page({
             data: {
               account: tel,
               password: pass,
-              clientType: 1,
               ip: ip,
               appId: code,
-              appVersion: "1.0.2"
+              appVersion: "1.0.2",
+              clientType: 1,
             },
             success: function(res) {
-          
+
               if (res.data.code == 100000) {
-                console.log(res)
-                wx.setStorageSync("account", res.data.result.account)  //用户的手机号
-                wx.setStorageSync("token", res.data.result.token)    //用户的token
-                wx.setStorageSync("accId", res.data.result.accId)    //用户的accId
+                wx.setStorageSync("account", res.data.result.account) //用户的手机号
+                wx.setStorageSync("token", res.data.result.token) //用户的token
+                wx.setStorageSync("accId", res.data.result.accId) //用户的accId
                 //获取当前用户的设备列表
                 wx.request({
                   url: 'http://192.168.0.106:8088/api/device/list',
@@ -82,18 +81,17 @@ Page({
                     token: res.data.result.token,
                     accId: res.data.result.accId,
                   },
-                  success: function (res) {  //并且保存到本地
-                    console.log(res.data.result[0].devName, "用户登录获取的")
-                    wx.setStorageSync("stata", res.data.result[0].devName)  //初始设备名
+                  success: function(res) { //并且保存到本地
+                    console.log(res.data.result[0], "用户登录获取的")
+                    wx.setStorageSync("stata", res.data.result[0].devName) //初始设备名
+                    wx.setStorageSync("stata", res.data.result[0].devId) //初始设备id
                     // wx.setStorageSync("result", res.data.result)    //当前用户
                   }
                 })
-
-
-                wx.switchTab({    //存储之后,状态符合100000,跳转到我的页面
+                wx.switchTab({ //存储之后,状态符合100000,跳转到我的页面
                   url: '/pages/my/my',
                 })
-              }else{
+              } else {
                 wx.showToast({
                   title: res.data.message,
                   icon: 'none',
@@ -129,7 +127,7 @@ Page({
     //     console.log(res)
     //   }
     // })
-    
+
   },
 
   /**

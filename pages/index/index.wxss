@@ -3,6 +3,7 @@ page {
   min-height: 100%;
   background-color: #f6f6f6;
 }
+
 swiper {
   width: 750rpx;
   height: 370rpx;
@@ -46,48 +47,53 @@ swiper image {
   position: absolute;
   top: 8rpx;
 }
+
 /* 右上角通知样式 */
- .notice{
+
+.notice {
   width: 50rpx;
   height: 50rpx;
   position: absolute;
   top: 13rpx;
   right: 13rpx;
 }
-.notice .notice2{
+
+.notice .notice2 {
   width: 30rpx;
   height: 36rpx;
   position: absolute;
   right: 10rpx;
   top: 6rpx;
 }
- .notice .yuan1{
+
+.notice .yuan1 {
   width: 100%;
   height: 100%;
- }
+}
 
 /* 切换爱车 */
 
 .cut {
-  width: 750rpx;
-  height: 122rpx;
-  background-color: #f6f6f6;
-  border-top-left-radius: 12rpx;
-  border-top-right-radius: 12rpx;
-  position: absolute;
-  top: 362rpx;
-}
-
-.cut .cut_car {
   width: 722rpx;
   height: 75rpx;
   background-color: #fff;
-  margin: 38rpx auto 0;
+  margin: 30rpx auto 0;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.cut .cut_car text {
+.cut .cut_car {
+  position: absolute;
+  width: 45rpx;
+  height: 37rpx;
+  right: 28rpx;
+  top: 25rpx;
+}
+
+.cut text {
   font-size: 26rpx;
   line-height: 26rpx;
   margin-left: 20rpx;
@@ -97,7 +103,7 @@ swiper image {
   width: 36rpx;
   height: 28rpx;
   margin-left: 24rpx;
-  margin-top: 5rpx
+  margin-top: 5rpx;
 }
 
 /* 电池信息 */
@@ -105,8 +111,7 @@ swiper image {
 .car_xinxi {
   width: 750rpx;
   height: 190rpx;
-  background-color: #f6f6f6;
-  margin-top: 120rpx;
+  margin-top: 130rpx;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -114,7 +119,7 @@ swiper image {
 }
 
 .car_xinxi .dianchi {
-  width: 337rpx;
+  width: 338rpx;
   height: 100%;
   background-color: #fff;
 }
@@ -122,9 +127,19 @@ swiper image {
 .car_xinxi .dianchi .dian_chi {
   width: 67rpx;
   height: 108rpx;
-  margin-left: 10rpx;
+  margin-left: 20rpx;
   margin-top: 40rpx;
   position: absolute;
+}
+
+.car_xinxi .dianchi .electric {
+  width: 67rpx;
+  max-height: 105rpx;
+  min-height: 0rpx;
+  bottom: 1rpx;
+  position: absolute;
+  background-color: #4bc4f7;
+  border-radius: 5rpx;
 }
 
 .car_xinxi .dianchi .fute {
@@ -197,8 +212,9 @@ swiper image {
   color: #666;
   padding-left: 15rpx;
 }
-.car_xinxi .totallu  .tkm{
-   font-size: 22rpx;
+
+.car_xinxi .totallu  .tkm {
+  font-size: 22rpx;
   line-height: 22rpx;
   color: #666;
   margin-left: 20rpx;
@@ -207,25 +223,27 @@ swiper image {
 }
 
 /* 开关启动设防 */
-.guard{
+
+.guard {
   width: 750rpx;
-  height: 305rpx;
-  background-color: #f6f6f6;
+  height: 300rpx;
   position: absolute;
-  top:670rpx;
+  top: 685rpx;
   display: flex;
   justify-content: center;
 }
-.guard .block{
+
+.guard .block {
   width: 722rpx;
-  height: 280rpx;
+  height: 300rpx;
   background-color: #fff;
   position: absolute;
   top: 15rpx;
 }
+
 /* 开关下方提示的样式 */
 
-.guard .block .bottl{
+.guard .block .bottl {
   width: 126rpx;
   height: 33rpx;
   position: absolute;
@@ -233,7 +251,8 @@ swiper image {
   left: 70rpx;
   line-height: 33rpx;
 }
-.guard .block .bottr{
+
+.guard .block .bottr {
   width: 126rpx;
   height: 33rpx;
   position: absolute;
@@ -241,36 +260,40 @@ swiper image {
   right: 70rpx;
   line-height: 33rpx;
 }
-.guard .block .bottl text{
+
+.guard .block .bottl text {
   font-size: 22rpx;
   line-height: 22rpx;
   color: #fff;
   position: absolute;
-  left:26rpx;
+  left: 26rpx;
   margin-top: 6rpx;
   font-weight: bold;
 }
-.guard .block .bottl image{
+
+.guard .block .bottl image {
   width: 100%;
   height: 100%;
 }
 
-.guard .block .bottr text{
+.guard .block .bottr text {
   font-size: 22rpx;
   line-height: 22rpx;
   color: #fff;
   position: absolute;
-  left:26rpx;
+  left: 26rpx;
   margin-top: 6rpx;
   font-weight: bold;
 }
-.guard .block .bottr image{
+
+.guard .block .bottr image {
   width: 100%;
   height: 100%;
 }
 
 /* 圆形开关 */
-.guard .block .fanghu{
+
+.guard .block .fanghu {
   width: 192rpx;
   height: 192rpx;
   /* display: inline-block; */
@@ -278,7 +301,8 @@ swiper image {
   top: 20rpx;
   left: 41rpx;
 }
-.guard .block .qidong{
+
+.guard .block .qidong {
   width: 192rpx;
   height: 192rpx;
   /* display: inline-block; */
@@ -286,28 +310,29 @@ swiper image {
   top: 20rpx;
   right: 41rpx;
 }
-.guard .block .fanghu image{
-  width: 100%;
-  height: 100%;
-}
-.guard .block .qidong image{
+
+.guard .block .fanghu image {
   width: 100%;
   height: 100%;
 }
 
+.guard .block .qidong image {
+  width: 100%;
+  height: 100%;
+}
 
 /* 首页的下部三个功能模块样式 */
-.three{
+
+.three {
   width: 750rpx;
   height: 150rpx;
-  background-color: #f6f6f6;
   position: absolute;
-  top: 959rpx;
+  top: 990rpx;
   display: flex;
   justify-content: center;
 }
 
-.three .lmr{
+.three .lmr {
   width: 720rpx;
   height: 40rpx;
   background-color: #fff;
@@ -315,39 +340,41 @@ swiper image {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding-top:20rpx;
-  padding-bottom:20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
   margin-top: 30rpx;
 }
 
-.three .lmr .weilan{
+.three .lmr .weilan {
   font-size: 26rpx;
   line-height: 26rpx;
   padding-left: 50rpx;
 }
-.three .lmr image{
+
+.three .lmr image {
   width: 16rpx;
   height: 16rpx;
   padding-right: 10rpx;
 }
-.three .lmr .guiji{
+
+.three .lmr .guiji {
   font-size: 26rpx;
   align-items: center;
   line-height: 26rpx;
-  
 }
+
 /* .three .lmr .guiji image{
   width: 16rpx;
   height: 16rpx;
 } */
-.three .lmr .weizhi{
+
+.three .lmr .weizhi {
   font-size: 26rpx;
   line-height: 26rpx;
   padding-right: 50rpx;
 }
+
 /* .three .lmr .weizhi image{
   width: 16rpx;
   height: 16rpx;
 } */
-
-

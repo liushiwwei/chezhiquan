@@ -22,7 +22,8 @@
       <!-- 播放器快退 -->
       <image src='/images/munsbt.png' class='munsbt' bindtap='pdd'></image>
       <!-- 播放器播放 -->
-      <image src='{{ifName?kai:guan}}' class='playbtn' bindtap='start'></image>
+      <image src='/images/playbtn.png' hidden='{{ifName}}' class='playbtn' bindtap='start'></image>
+      <image src='/images/end_bnt.png' hidden='{{!ifName}}'  class='playbtn' bindtap='stop'></image>
       <!-- 播放器快进 -->
       <image src='/images/addplay.png' class='addplay' bindtap='add'></image>
     </view>

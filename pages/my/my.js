@@ -46,8 +46,17 @@ Page({
         selected: 2
       })
     }
+
+    var token = wx.getStorageSync("token") //令牌
+    if (!token) { //验证登录
+      console.log("未登录")
+      wx.reLaunch({
+        url: '/pages/login/login',
+      })
+    } else {
+      console.log("已登录")
+    }   //验证登录
     const account = wx.getStorageSync("account")
-    const token = wx.getStorageSync("token")
     const accId = wx.getStorageSync("accId")
     var ifno = this.data.ifno
     if (account) {

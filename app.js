@@ -5,19 +5,23 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    console.log("检查登录")
-    const tel = wx.getStorageSync("account")
+
+    wx.getUserInfo({
+      success(res){
+        console.log(res)
+      }
+    })
+    // console.log("检查登录")
+    const tok = wx.getStorageSync("token")
     // console.log(!tel)
-    if(!tel){
-      console.log("未登录")
+    if (!tok){
+      // console.log("未登录")
       wx.reLaunch({
         url: '/pages/login/login',
       })
     }else{
-      console.log("已登录")
+      // console.log("已登录")
     }
-
-
 
   },
 
@@ -26,9 +30,9 @@ App({
    */
   onShow: function (options) {
     console.log("检查登录")
-    const tel = wx.getStorageSync("account")
+    const tok = wx.getStorageSync("token")
     // console.log(!tel)
-    if (!tel) {
+    if (!tok) {
       console.log("未登录")
       wx.reLaunch({
         url: '/pages/login/login',
@@ -46,7 +50,7 @@ App({
   },
 
   /**
-   * 当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息
+   * 当小程序发生脚本错误，或者 api 调用失败时，会触发 onError  并带上错误信息
    */
   onError: function (msg) {
     

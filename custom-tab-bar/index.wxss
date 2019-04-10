@@ -34,8 +34,8 @@
 }
 
 .tab-bar-item cover-view {
-  margin-top: 10rpx;
+  margin-top: 8rpx;
   margin-left:3rpx;
-  font-size: 21rpx;
-  line-height: 21rpx;
+  font-size: 22rpx;
+  line-height: 22rpx;
 }
