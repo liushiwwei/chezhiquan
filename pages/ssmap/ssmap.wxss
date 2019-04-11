@@ -1,9 +1,14 @@
 /* pages/ssmap/ssmap.wxss */
-#myMap{
-  width: 750rpx;
-    height: 600rpx;
-    }
-#myMap image{
+page {
+  height: 100%;
+}
+#myMap {
+  width: 100%;
+  min-height:100%;
+  position: relative;
+}
+
+#myMap image {
   width: 60rpx;
   height: 60rpx;
   margin-top: 530rpx;
@@ -14,11 +19,28 @@
   width: 80rpx;
   height: 80rpx;
   margin-left: 20rpx;
-  margin-top: 500rpx;
+  position: absolute;
+  bottom: 20rpx;
 }
-.gps{
+
+.gps {
   width: 750rpx;
   height: 120rpx;
   background-color: #1296db;
-  text-align:left;
+  text-align: left;
+}
+
+.mapo{
+  width: 100%;
+  height: 246rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mapo .moo{
+  width: 700rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin: 22rpx auto;  
 }

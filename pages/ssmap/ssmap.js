@@ -1,23 +1,65 @@
 // pages/ssmap/ssmap.js
+var util = require('../../utils/util.js') //引入时间js
+var token = wx.getStorageSync("token") //令牌
+var accId = wx.getStorageSync("accId") //用户id
+var devId = wx.getStorageSync("devId") //设备id
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    markers: [],
     lat: '',
     long: '',
     speed: '',
-    mapSt:null
+    mapSt:null,
+    TIME:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
     this.mapCtx = wx.createMapContext('myMap') //创建一个全局的MapContext实例，并且和组建的<map> 的id绑定
-  },
+    var TIME = util.formatTime(new Date())      //获取当前时间
+    var toTIME = util.fordatTime(new Date())
+    var day=  TIME.replace("-", "").replace("-", "") 
+    this.setData({
+      TIME,
+    })
 
+    wx.request({
+      url: `http://192.168.0.106:8088/api/device/gps-last/${devId}`,
+      method: "get",
+      header: {
+        "Authorization": "Basic YXBwOmFwcDEwMTI=",
+      },
+      data: {
+        token,
+        accId,
+        day
+      },
+      success: function (res) {
+        console.log(JSON.parse(res.data.result))
+        var result = JSON.parse(res.data.result)
+        _this.setData({
+          long: 114.08190678985596,
+          lat: 22.544808209639864,
+          markers: [{
+            iconPath: '/resources/others.png',
+            id: 1,
+            latitude: 22.544808209639864,
+            longitude: 114.08190678985596,
+            width: "38rpx",
+            height: "48rpx",
+            iconPath: "/images/myweizhi.png",
+          }],
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -36,47 +78,21 @@ Page({
 
       }
     })
-    _this.mapCtx.moveToLocation();
 
-    this.mapSt = setInterval(    //设定一个定时器
-      function spe() {
 
-        wx.getLocation({
-          success: function (res) {  //接口调用成功,返回的是wgs84定位,和手机的一样
-            // console.log(res)
-            if (res.speed < 0) {
-              _this.setData({
-                speed: 0,
-                // lat: res.latitude,
-                // long: res.longitude
-              })
-            } else {
-              _this.setData({
-                speed: res.speed
-              })
-            }
-            // console.log(_this)
-          },
-          fail: function (err) { //如果接口调用失败,没有获取到定位信息
-            // console.log(err)
-            _this.setData({
-              speed: "服务器繁忙,速度未获取",
-            })
-          }
-        })
-      }, 1000)
 
-    console.log(_this.data);
+
+    // _this.mapCtx.moveToLocation();
   },
 
   // 点击回到自己位置
-  backTap() {
+  aa(e) {
     var _this = this;
-    // _this.mapCtx = wx.createMapContext('myMap') //创建一个MapContext实例，并且和组建的<map> 的id绑定
+    console.log(e)
 
-    _this.mapCtx.moveToLocation();
-    console.log(_this.data.lat);
-    console.log(_this.data.long);
+  },
+  mpo(e) {
+    console.log(this.data)
 
   },
   /**
@@ -90,7 +106,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    clearInterval(this.mapSt)
+    
   },
 
   /**

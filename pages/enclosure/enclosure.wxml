@@ -11,7 +11,7 @@ show-location>
           <!-- 加减 -->
           <cover-image class='minus' catchtap='minus' src='/images/minus.png'></cover-image>
               <cover-view class='_jindu'>
-                  <cover-view style='width:{{total}}%' class='jindu2'></cover-view>
+                  <cover-view style='width:{{width}}%' class='jindu2'></cover-view>
               </cover-view>
           <cover-image class='add' catchtap='add' src='/images/add.png'></cover-image>
 

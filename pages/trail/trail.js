@@ -1,5 +1,7 @@
 // pages/trail/trail.js
 
+var accId = wx.getStorageSync("accId") //用户id
+var token = wx.getStorageSync("token") //令牌
 var times;
 Page({
 
@@ -53,17 +55,48 @@ Page({
     });
   },
   bindDateChange(e) { //选择日期的事件
+    var _this = this
+    var devId = wx.getStorageSync("devId") //设备id
+    console.log(devId)
     console.log(e.detail.value.replace("-", "").replace("-", ""))
-    var ym = e.detail.value.replace("-", "").replace("-", "")
+    var ym = e.detail.value.replace("-", "").replace("-", "")   //选择的年月日,日期
+    this.setData({
+
+    })
+    wx.request({
+      url: `http://192.168.0.106:8088/api/device/gps-specify/${devId}/${ym}`,
+      method: "get",
+      header: {
+        "Authorization": "Basic YXBwOmFwcDEwMTI=",
+      },
+      data: {
+        accId,
+        token,
+      },
+      success: function (res) {
+            console.log(res)
+        var point =res.data.result    //服务器返回的定位对象集合
+        _this.setData({       //选择日期,将请求当前设备的路径集合,并保存路径集合,在播放中获取集合
+          point
+        })
+      }
+    })
   },
   start() { //播放
   console.log("开始")
     var _this = this
+    var point = this.data.point
     var ifon = _this.data.ifName
     ifon = !ifon
     console.log(ifon);
-    _this.setData({
-      ifName: ifon
+    _this.setData({ 
+      ifName: ifon,
+      polyline: [{
+        points: point,
+        color: '#4bc4f7',
+        width: 4,
+        dottedLine: false
+      }]
     })
 
     times = setInterval(function () { _this.time()}, 100)
@@ -102,7 +135,7 @@ Page({
       firstMins = 0;
       firstHours++
       _this.setData({
-        firstMins,
+        firstMins: "0" + firstMins,
         firstHours: "0" + firstHours
       })
     } else if (firstHours < 10 && firstMins < 10) {
@@ -189,32 +222,33 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-    // this.timer = setInterval(repeat, 1000); //周期循环
+    this.timer = setInterval(repeat, 1000); //周期循环
     // function repeat() {
     //   console.log(111);
 
-    //   console.log(_this.data)
-    //   var point = _this.data.point
-    //   var lat =0
-    //   var lng =0
-    //   wx.getLocation({
-    //     type: 'gcj02',
-    //     success: function (res) {
-    //       lat = res.latitude;
-    //       lng = res.longitude;
-    //       point.push({ latitude: lat, longitude: lng });
-    //       console.log(point);
-    //     }
-    //   });
-    //   console.log(222);
-    //   _this.setData({
-    //     polyline:[{
-    //       points: point,
-    //       color: '#4bc4f7',
-    //       width: 4,
-    //       dottedLine: false
-    //     }]
-    //   })
+      console.log(_this.data)
+      var point = _this.data.point
+      var lat =0
+      var lng =0
+      wx.getLocation({
+        type: 'gcj02',
+        success: function (res) {
+          lat = res.latitude;
+          lng = res.longitude;
+          point.push({ latitude: lat, longitude: lng });
+          console.log(point);
+        }
+      });
+      console.log(222);
+      _this.setData({
+        polyline:[{
+          points: point,
+          color: '#4bc4f7',
+          width: 4,
+          dottedLine: false
+        }]
+      })
     // }
+
   }
 })

@@ -14,6 +14,7 @@ page {
 .top image{
   width: 90rpx;
   height: 90rpx;
+  border-radius: 45rpx;
   margin-top: 66rpx;
   margin-left: 62rpx;
 }
@@ -38,7 +39,7 @@ page {
   line-height: 24rpx;
   position: absolute;
   right: 40rpx;
-  top: 130rpx;
+  top: 150rpx;
   color: #4bc4f7;
 }
 .top .record{
@@ -46,7 +47,7 @@ page {
   line-height: 26rpx;
   position: absolute;
   color: #4bc4f7;
-  top: 18rpx;
+  top: 30rpx;
   right: 45rpx;
 }
 .top .txvip{

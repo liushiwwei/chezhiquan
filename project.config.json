@@ -9,7 +9,7 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": true,
+		"autoAudits": false,
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
@@ -64,7 +64,7 @@
 				{
 					"id": 3,
 					"name": "test",
-					"pathName": "pages/trail/trail",
+					"pathName": "pages/ssmap/ssmap",
 					"query": "",
 					"scene": null
 				}

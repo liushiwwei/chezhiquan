@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    total: 0,
+    total: 50,
     guan: '/images/moren.png',
     kai: '/images/fanghu.png',
     weolan: false,
@@ -15,8 +15,9 @@ Page({
     mapSt: null,
     scale: 18,
     circles: [],
-    radius: 0,
-    xxx: 4
+    radius: 50,
+    xxx: 50,
+    width:0
   },
 
   /**
@@ -56,8 +57,8 @@ Page({
             id: "1",
             latitude: res.latitude,
             longitude: res.longitude,
-            width: "38rpx",
-            height: "48rpx",
+            width: "20rpx",
+            height: "30rpx",
             iconPath: "/images/myweizhi.png",
           }],
           circles: [{
@@ -65,7 +66,7 @@ Page({
             longitude: _this.data.longitude,
             color: '#4BC4F740',
             fillColor: '#7cb5ec80',
-            radius: 4,
+            radius:50,
             strokeWidth: 0.1
           }]
 
@@ -90,10 +91,12 @@ Page({
   add() {
     var _this = this;
     var total = this.data.total;
-    if (total < 100) {  //小于100就+   超过一百就没反应
+    var width =this.data.width;
+    if (total < 200) {  //小于100就+   超过一百就没反应
       this.setData({
         total: total + 4,  //用来反应进度条和计算半径的
-        xxx: 2 * (total + 4)       //反应多少米
+        xxx: total + 4,     //反应多少米
+        width: width + 2.7
       })
     }
     wx.getLocation({
@@ -104,20 +107,20 @@ Page({
           longitude: res.longitude,
         })
         _this.setData({
-          markers: [{
-            id: "1",
-            latitude: res.latitude,
-            longitude: res.longitude,
-            width: "38rpx",
-            height: "48rpx",
-            iconPath: "/images/myweizhi.png",
-          }],
+          // markers: [{
+          //   id: "1",
+          //   latitude: res.latitude,
+          //   longitude: res.longitude,
+          //   width: "20rpx",
+          //   height: "30rpx",
+          //   iconPath: "/images/myweizhi.png",
+          // }],
           circles: [{
             latitude: _this.data.latitude,
             longitude: _this.data.longitude,
             color: '#4BC4F740',
             fillColor: '#7cb5ec80',
-            radius: _this.data.total * 2,
+            radius: _this.data.total,
             strokeWidth: 0.1
           }]
 
@@ -133,12 +136,14 @@ Page({
   minus() {
     var _this = this;
     var total = this.data.total;
-    if (total > 0) {
+    var width = this.data.width;
+    if (total > 50) {
       this.setData({
         total: total - 4, //用来反应进度条和计算半径的
-        xxx: 2 * (total - 4)       //反应多少米
+        xxx: total - 4,     //反应多少米
+        width: width - 2.7
       })
-    }
+    } 
     wx.getLocation({
       type: "gcj02",
       success: function (res) {
@@ -147,20 +152,20 @@ Page({
           longitude: res.longitude,
         })
         _this.setData({
-          markers: [{
-            id: "1",
-            latitude: res.latitude,
-            longitude: res.longitude,
-            width: "38rpx",
-            height: "48rpx",
-            iconPath: "/images/myweizhi.png",
-          }],
+          // markers: [{
+          //   id: "1",
+          //   latitude: res.latitude,
+          //   longitude: res.longitude,
+          //   width: "20rpx",
+          //   height: "30rpx",
+          //   iconPath: "/images/myweizhi.png",
+          // }],
           circles: [{
             latitude: _this.data.latitude,
             longitude: _this.data.longitude,
             color: '#4BC4F740',
             fillColor: '#7cb5ec80',
-            radius: _this.data.total * 2,
+            radius: _this.data.total,
             strokeWidth: 0.1
           }]
 

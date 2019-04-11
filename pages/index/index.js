@@ -13,14 +13,14 @@ Page({
     swipers: [], //轮播图信息集合
     notice: [], //开关图片信息集合
     name: '车智犬', //车子名字
-    electric:0, //电池电量
+    electric: 0, //电池电量
     carVoltage: 40.67, //车子电池信息
     km: 99, //  今日里程
     totalkm: 9999, //总里程
     qidongon: false, //启动开关
     fanghuon: false, //防护开关
     results: [], //选择设备集合
-    result: [],  //设备信息集合,用作设备信息匹配
+    result: [], //设备信息集合,用作设备信息匹配
     stata: "" //所选车的名字
   },
 
@@ -28,7 +28,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function(e) {
-  
+
   },
   bindPickerChangeName(e) { //选择车辆
     var token = wx.getStorageSync("token") //令牌
@@ -38,7 +38,7 @@ Page({
     console.log("当前选择的第", this.data.result[idx], "它的devId是", this.data.result[idx].devId)
     var devId = this.data.result[idx].devId
     wx.setStorageSync("devId", devId)
-    wx.request({    //1.选择车辆,请求获取当前车辆的电压,速度等信息
+    wx.request({ //1.选择车辆,请求获取当前车辆的电压,速度等信息
       url: 'http://192.168.0.106:8088/api/device/car-params',
       method: "post",
       header: {
@@ -48,27 +48,27 @@ Page({
         devId,
         token
       },
-      success: function (res) {
+      success: function(res) {
         console.log('picker发送选择改变，携带值为', res)
-              // wx.request({    //2.选择车辆,请求获取当前车辆的电池等信息
-              //   url: 'http://192.168.0.106:8088/api/device/car-set',
-              //   method: "post",
-              //   header: {
-              //     "Authorization": "Basic YXBwOmFwcDEwMTI=",
-              //   },
-              //   data: {
-              //     devId,
-              //     paramsId: res.data.result.paramsId,
-              //     carType: res.data.result.carType
-              //   },
-              //   success: function (res) {
-              //     console.log('携带电池信息', res)
-              //   }
-              // })
+        // wx.request({    //2.选择车辆,请求获取当前车辆的电池等信息
+        //   url: 'http://192.168.0.106:8088/api/device/car-set',
+        //   method: "post",
+        //   header: {
+        //     "Authorization": "Basic YXBwOmFwcDEwMTI=",
+        //   },
+        //   data: {
+        //     devId,
+        //     paramsId: res.data.result.paramsId,
+        //     carType: res.data.result.carType
+        //   },
+        //   success: function (res) {
+        //     console.log('携带电池信息', res)
+        //   }
+        // })
       }
     })
 
-   
+
 
     this.setData({
       stata: results[idx]
@@ -86,7 +86,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function(e) {
-    if (typeof this.getTabBar === "function" &&   //自定义tab的索引渲染
+    if (typeof this.getTabBar === "function" && //自定义tab的索引渲染
       this.getTabBar()) {
       this.getTabBar().setData({
         selected: 0
@@ -96,15 +96,13 @@ Page({
     var stata = wx.getStorageSync("stata") //用户初始的设备
     var token = wx.getStorageSync("token") //令牌
     if (!token) { //验证登录
-      console.log("未登录")
+      // console.log("未登录")
       wx.reLaunch({
         url: '/pages/login/login',
       })
     } else {
-      console.log("已登录")
-    }   //验证登录
-
-
+      // console.log("已登录")
+    } //验证登录
     this.setData({
       stata,
     })
@@ -122,8 +120,8 @@ Page({
         token,
         accId,
       },
-      success: function (res) {    //获取到数据后
-      // console.log(res,"当前用户的设备集合")
+      success: function(res) { //获取到数据后
+        // console.log(res,"当前用户的设备集合")
         var results = [];
         for (var i = 0; i < res.data.result.length; i++) { //对当前登录用户的设备集合进行遍历,取出进行遍历
           results.push(res.data.result[i].devName)
@@ -179,10 +177,10 @@ Page({
   onLoad: function(options) {
     var that = this
     var electric = this.data.electric
-    var tim = setInterval(function () {
-      electric ++
-      if (electric==100){
-        electric=0
+    var tim = setInterval(function() {
+      electric++
+      if (electric == 100) {
+        electric = 0
         that.setData({
           electric
         })
@@ -191,20 +189,20 @@ Page({
         electric
       })
     }, 100)
-    this.setData({  //轮播图数据
+    this.setData({ //轮播图数据
       swipers,
       notice
     })
-   
+
   },
-  carLove(e){
+  carLove(e) {
     console.log(e)
-    if(e.type){
+    if (e.type) {
       wx.redirectTo({
         url: '/pages/index/index',
       })
     }
-   
+
   },
   /**
    * 生命周期函数--监听页面隐藏

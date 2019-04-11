@@ -18,7 +18,7 @@
   <!-- 登录按钮 -->
   <view class='loginBtn'>
     <text class='btnTex' bindtap='retrieve'>忘记密码?</text>
-    <button bindtap='login'>登录</button>
+    <button bindgetuserinfo='login' lang="zh_CN" open-type="getUserInfo">登录</button>
   </view>
   <!-- 新用户注册 -->
   <view class='register'>

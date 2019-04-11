@@ -1,8 +1,8 @@
 <!--pages/my/my.wxml-->
 <view class='top'>
-  <image src='../../static/mimg/head.png'></image>
+  <image class='avatarUrl' src='{{avatarUrl}}'></image>
   <text class='mobil' wx:if="{{ifno}}">{{usertel}}</text>
-  <text class='logg' wx:if="{{!ifno}}" bindtap='userInfo'>登录</text>
+  <!-- <text class='logg' wx:if="{{!ifno}}" bindtap='userInfo'>登录</text> -->
   <text class='txvip'>{{}}</text>
   <text class='czvip'>续费>></text>
   <navigator url='/pages/record/record' class='record'>充值记录</navigator>
@@ -30,7 +30,7 @@
     <view class="weui-cell__hd">
       <image src="../../static/mimg/xiugai.png" style="margin-right: 20rpx;vertical-align: middle;width:45rpx; height: 40rpx;"></image>
     </view>
-    <view class="weui-cell__bd" bindtap='editMima'>修改密码</view>
+    <view class="weui-cell__bd">修改密码</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
   <!-- 关于我们 -->
