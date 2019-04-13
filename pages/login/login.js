@@ -36,7 +36,7 @@ Page({
   },
 
   login(e) {
-    console.log(e.detail.userInfo.avatarUrl)
+    // console.log(e.detail.userInfo.avatarUrl)
     wx.setStorageSync("avatarUrl", e.detail.userInfo.avatarUrl) //用户的头像
     var _this = this;
     wx.login({
@@ -83,10 +83,17 @@ Page({
                     token: res.data.result.token,
                     accId: res.data.result.accId,
                   },
-                  success: function(res) { //并且保存到本地
+                  success: function(res) { //登录成功之后获取当前用户的设备保存到本地
                     console.log(res.data.result[0], "用户登录获取的")
-                    wx.setStorageSync("stata", res.data.result[0].devName) //初始设备名
-                    wx.setStorageSync("devId", res.data.result[0].devId) //初始设备id
+                 if(res.data.result.length){
+                   wx.setStorageSync("devName", res.data.result[0].devName) //初始设备名
+                   wx.setStorageSync("devId", res.data.result[0].devId) //初始设备id
+                   wx.setStorageSync("devImei", res.data.result[0].devImei) //初始设备imei
+                 }else{
+                   wx.setStorageSync("devName", false) //初始设备名
+                   wx.setStorageSync("devId",   false) //初始设备id
+                   wx.setStorageSync("devImei", false) //初始设备imei
+                 }
                     // wx.setStorageSync("result", res.data.result)    //当前用户
                   }
                 })

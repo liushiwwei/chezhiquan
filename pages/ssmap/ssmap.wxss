@@ -38,9 +38,32 @@ page {
 }
 
 .mapo .moo{
-  width: 700rpx;
+  width: 672rpx;
   height: 200rpx;
   background-color: #fff;
   border-radius: 8rpx;
   margin: 22rpx auto;  
+  text-align: left;
+  position: relative;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  padding-left: 28rpx;
+}
+
+.mapo .moo cover-image{
+  width: 62rpx;
+  height: 62rpx;
+  position: absolute;
+  right: 24rpx;
+  top: 24rpx;
+}
+
+.imei{
+  margin-top: 28rpx;
+}
+.times{
+  margin-top: 28rpx;
+}
+.gpss{
+  margin-top: 28rpx;
 }

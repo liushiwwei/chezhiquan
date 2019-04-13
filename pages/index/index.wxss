@@ -130,16 +130,18 @@ swiper image {
   margin-left: 20rpx;
   margin-top: 40rpx;
   position: absolute;
+  text-align: center;
 }
 
 .car_xinxi .dianchi .electric {
-  width: 67rpx;
-  max-height: 105rpx;
+  width: 55rpx;
+  max-height: 97rpx;
   min-height: 0rpx;
-  bottom: 1rpx;
+  bottom: 5rpx;
   position: absolute;
   background-color: #4bc4f7;
   border-radius: 5rpx;
+  margin-left: 6rpx;
 }
 
 .car_xinxi .dianchi .fute {

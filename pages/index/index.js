@@ -3,6 +3,9 @@
 import swipers from '../../datas/swipers.js'
 import notice from '../../datas/notice.js'
 
+var accId = wx.getStorageSync("accId") //用户id
+// var stata = wx.getStorageSync("stata") //用户初始的设备
+var token = wx.getStorageSync("token") //令牌
 Page({
 
   /**
@@ -21,7 +24,10 @@ Page({
     fanghuon: false, //防护开关
     results: [], //选择设备集合
     result: [], //设备信息集合,用作设备信息匹配
-    stata: "" //所选车的名字
+    stata: "", //所选车的名字
+    imei:"", //当前选择的车的imeii号
+    devId:"", //当前选择车辆的devid
+    length:""
   },
 
   /**
@@ -31,13 +37,24 @@ Page({
 
   },
   bindPickerChangeName(e) { //选择车辆
-    var token = wx.getStorageSync("token") //令牌
-    var accId = wx.getStorageSync("accId") //用户id
     var results = this.data.results //获取当前用户设备集合后,取出设备集合的devName,组成的新数组.来使用picker
+    console.log(results)
     var idx = e.detail.value
-    console.log("当前选择的第", this.data.result[idx], "它的devId是", this.data.result[idx].devId)
+    // console.log("当前选择的", this.data.result[idx], "它的devId是", 
+    // this.data.result[idx].devId)
+    console.log("当前选择的", this.data.result[idx], "它的devImei是", 
+      this.data.result[idx].devImei)
+   
+    var devImei = this.data.result[idx].devImei
+    var stata = this.data.result[idx].devName
     var devId = this.data.result[idx].devId
-    wx.setStorageSync("devId", devId)
+    this.setData({
+      imei: this.data.result[idx].devImei,
+      devId: this.data.result[idx].devId
+    })
+    wx.setStorageSync("devImei", devImei) //选择后保存,覆盖登录获取的初始信息
+    wx.setStorageSync("devName", stata)   //选择后保存,覆盖登录获取的初始信息
+    wx.setStorageSync("devId", devId)     //选择后保存,覆盖登录获取的初始信息 
     wx.request({ //1.选择车辆,请求获取当前车辆的电压,速度等信息
       url: 'http://192.168.0.106:8088/api/device/car-params',
       method: "post",
@@ -71,7 +88,7 @@ Page({
 
 
     this.setData({
-      stata: results[idx]
+      stata
     })
   },
   // 选择城市的多项列表
@@ -85,16 +102,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function(e) {
+  onShow: function (e) {
+    var stata = wx.getStorageSync("devName") //令牌
     if (typeof this.getTabBar === "function" && //自定义tab的索引渲染
       this.getTabBar()) {
       this.getTabBar().setData({
         selected: 0
       })
     }
-    var accId = wx.getStorageSync("accId") //用户id
-    var stata = wx.getStorageSync("stata") //用户初始的设备
-    var token = wx.getStorageSync("token") //令牌
     if (!token) { //验证登录
       // console.log("未登录")
       wx.reLaunch({
@@ -107,8 +122,6 @@ Page({
       stata,
     })
     var _this = this
-    var token = wx.getStorageSync("token")
-    var accId = wx.getStorageSync("accId")
     //获取当前用户的设备列表
     wx.request({
       url: 'http://192.168.0.106:8088/api/device/list',
@@ -129,7 +142,8 @@ Page({
         // console.log(results, "遍历组合")
         _this.setData({ //将信息集合添加的页面中
           results,
-          result: res.data.result
+          result: res.data.result,
+          length: res.data.result.length
         })
       }
     })
@@ -154,8 +168,9 @@ Page({
   },
   // 实时位置的按钮
   sswz() {
+    var imei = this.data.imei
     wx.navigateTo({
-      url: '/pages/ssmap/ssmap',
+      url: `/pages/ssmap/ssmap?imei=${imei}`,
     })
   },
   // 历史轨迹
@@ -175,6 +190,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var imei = wx.getStorageSync("devImei") //用户id
+    var devId = wx.getStorageSync("devId") //用户id
     var that = this
     var electric = this.data.electric
     var tim = setInterval(function() {
@@ -191,19 +208,13 @@ Page({
     }, 100)
     this.setData({ //轮播图数据
       swipers,
-      notice
+      notice,
+      imei,   //没有选择设备时的imei
+      devId   //没有选择设备时的devid
     })
 
   },
-  carLove(e) {
-    console.log(e)
-    if (e.type) {
-      wx.redirectTo({
-        url: '/pages/index/index',
-      })
-    }
 
-  },
   /**
    * 生命周期函数--监听页面隐藏
    */

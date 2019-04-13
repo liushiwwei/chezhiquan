@@ -2,6 +2,10 @@
 import times from '../../datas/install.js'
 import tips from '../../datas/bjtips.js'
 
+var devId = wx.getStorageSync("devId") //设备id
+var accId = wx.getStorageSync("accId") //用户id
+var token = wx.getStorageSync("token") //令牌
+var tel = wx.getStorageSync("account")  //当前登录的手机,需要报警的手机
 Page({
 
   /**
@@ -30,20 +34,34 @@ Page({
 
   clearStor() { //清除缓存
     // console.log(111)
-    wx.clearStorage()
-    wx.showLoading({
-      title: '请重新登录',
-      icon: "none",
-      mask: true,
-      duration: 2000,
-      success:function(){
-        wx.hideLoading()
-        wx.reLaunch({
+    wx.showModal({
+      title:"提示",
+      content:"是否要清除缓存,重新登录",
+      success(res) {
+        if (res.confirm) {
+          wx.clearStorage()
+          wx.reLaunch({
           url: '/pages/login/login',
         })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
       }
-    
     })
+    // wx.clearStorage()
+    // wx.showLoading({
+    //   title: '请重新登录',
+    //   icon: "none",
+    //   mask: true,
+    //   duration: 2000,
+    //   success:function(){
+    //     wx.hideLoading()
+    //     wx.reLaunch({
+    //       url: '/pages/login/login',
+    //     })
+    //   }
+    
+    // })
     // var token = wx.getStorageSync("token")//令牌
     // var accId = wx.getStorageSync("accId")//用户id
     // console.log(token)
@@ -79,10 +97,6 @@ Page({
    
   },
   switchChangeCall(e){//报警开关
-    var devId = wx.getStorageSync("devId") //设备id
-    var accId = wx.getStorageSync("accId") //用户id
-    var token = wx.getStorageSync("token") //令牌
-    var tel = wx.getStorageSync("account")  //当前登录的手机,需要报警的手机
     var edit = e.detail.value
     var val=null
     if(edit){
@@ -118,10 +132,6 @@ Page({
     })
     console.log(parseInt(this.data.state))
     
-    var devId = wx.getStorageSync("devId") //设备id
-    var accId = wx.getStorageSync("accId") //用户id
-    var token = wx.getStorageSync("token") //令牌
-    var tel = wx.getStorageSync("account")  //当前登录的手机,需要报警的手机
     var edit = e.detail.value
     var sec = parseInt(this.data.state)       //设置的报警时长
 
@@ -165,11 +175,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    var devId = wx.getStorageSync("devId") //设备id
-    var accId = wx.getStorageSync("accId") //用户id
-    var token = wx.getStorageSync("token") //令牌
     var that = this
-    console.log(devId)
     wx.request({
       url: `http://192.168.0.106:8088/api/device/call-status/${devId}`,
       method: "get",

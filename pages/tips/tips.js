@@ -1,21 +1,35 @@
 // pages/tips/tips.js
 // 引入js
+var util = require('../../utils/util.js') //引入时间js
 import tips from '../../datas/tips.js'
+var accId = wx.getStorageSync("accId") //用户id
+var token = wx.getStorageSync("token") //令牌
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tips:[]
+    tips:[],
+    devId:"",  //当前设备devid
+    day:"" ,  //时间
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var TIME = util.formatTime(new Date()) //获取当前时间
+    var day = TIME.replace("-", "").replace("-", "")
     this.setData({
-      tips
+      day,
+    })
+
+    console.log(options)
+    var devId = options.devId
+    this.setData({
+      tips,
+      devId
     })
   },
 
@@ -50,8 +64,26 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function (e) {
+    var _this= this;
+    var devId = _this.data.devId;
+    var day = _this.data.day;
+    var Type = 2
+    console.log(devId, day, Type, accId, token)
+    wx.request({
+      url: `http://192.168.0.106:8088/api/device/warn-specify/${devId}/${day}/${Type}`,
+      method: "get",
+      header: {
+        "Authorization": "Basic YXBwOmFwcDEwMTI=",
+      },
+      data: {
+        accId,
+        token
+      },
+      success: function (res) {
+     console.log(res)
+      }
+    })
   },
 
   /**

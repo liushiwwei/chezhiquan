@@ -12,7 +12,7 @@
     </view>
     <view class='password'>
       <image src='/images/PASSicon.png'></image>
-      <input class="logpass" password type="text" placeholder="密码"  placeholder-style="color:#fff"  placeholder-class='lolol' bindinput='passusr'/>
+      <input class="logpass" password type="text" placeholder="密码"  placeholder-style="color:#fff" maxlength="6"  placeholder-class='lolol' bindinput='passusr'/>
     </view>
   </view>
   <!-- 登录按钮 -->

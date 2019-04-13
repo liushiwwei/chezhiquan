@@ -72,7 +72,6 @@ Page({
     const account = wx.getStorageSync("account")
     const accId = wx.getStorageSync("accId")
     var myphone = account.substr(3, 4);
-    console.log(myphone)
     var lphone = account.replace(myphone, "****");
     var ifno = this.data.ifno
     if (token) {

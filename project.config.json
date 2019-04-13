@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -57,14 +57,14 @@
 				{
 					"id": 2,
 					"name": "1",
-					"pathName": "pages/install/install",
+					"pathName": "pages/ssmap/ssmap",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 3,
 					"name": "test",
-					"pathName": "pages/ssmap/ssmap",
+					"pathName": "pages/trail/trail",
 					"query": "",
 					"scene": null
 				}

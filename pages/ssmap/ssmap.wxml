@@ -1,8 +1,16 @@
 <!--pages/ssmap/ssmap.wxml-->
-<map id='myMap' latitude='{{lat}}' markers="{{markers}}" bindmarkertap='mpo' bindpoitap='aa' longitude='{{long}}' show-location>
+<map id='myMap' latitude='{{lat}}' polyline="{{polyline}}" markers="{{markers}}" bindmarkertap='mpo' longitude='{{long}}' show-location>
     <!-- <cover-image class="cover-image" catchtap="backTap" src="/static/img/location.png" /> -->
-     <cover-view class='mapo'>
-        <cover-view class='moo'></cover-view>
+     <cover-view wx:if="{{ifname}}" class='mapo'>
+        <cover-view class='moo'>
+            <cover-view class='imei'>IMEI号:{{devImei}}</cover-view>
+            <cover-view class='times'>最新上传时间:{{TIME}}</cover-view>
+            <cover-view class='gpss'>位置:{{gpss}}</cover-view>
+            <cover-image bindtap='gpsbtn' src='/images/gpsbtn.png'></cover-image>
+        </cover-view>
+     </cover-view>
+     <cover-view class='navigation'>
+        
      </cover-view>
 </map>
  

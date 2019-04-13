@@ -89,17 +89,17 @@ Page({
     var ifon = _this.data.ifName
     ifon = !ifon
     console.log(ifon);
-    _this.setData({ 
-      ifName: ifon,
-      polyline: [{
-        points: point,
-        color: '#4bc4f7',
-        width: 4,
-        dottedLine: false
-      }]
-    })
+    // _this.setData({ 
+    //   ifName: ifon,
+    //   polyline: [{
+    //     points: point,
+    //     color: '#4bc4f7',
+    //     width: 4,
+    //     dottedLine: false
+    //   }]
+    // })
 
-    times = setInterval(function () { _this.time()}, 100)
+    times = setInterval(function () { _this.time()}, 1000)
 
   },
   stop() { //暂停
@@ -114,7 +114,6 @@ Page({
     clearInterval(times)
   },
   time: function() { //计时器
-    console.log(11)
     var _this = this
     var firstHours = _this.data.firstHours;
     var firstMins = _this.data.firstMins;

@@ -1,4 +1,4 @@
-
+A3GBZ-MSTCX-6HF4B-ZROWL-4H6K7-HIF4N        ///腾讯地图api  key
 e80abff3c1180aa38222b53d1b0220b1
 [[我的]]
 index  首页				static  是自建js数据
